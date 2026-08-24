@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>[중1 수학] Ⅳ. 통계 통합 워크북 (09. 자료의 정리 & 10. 상대도수)</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f4f6f8; color: #212529; padding: 20px; line-height: 1.6; }
+    
+    .page { 
+      max-width: 840px; 
+      margin: 0 auto 30px auto; 
+      background: white; 
+      padding: 36px 45px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+      position: relative;
+    }
+    
+    .cover-header { 
+      border-bottom: 3px solid #1a73e8; 
+      padding-bottom: 12px; 
+      margin-bottom: 18px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+    .cover-header h1 { margin: 0; font-size: 24px; color: #1a73e8; }
+    .cover-header .sub { font-size: 13px; color: #e37400; font-weight: bold; }
+    .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
+    
+    .section-banner {
+      background: linear-gradient(90deg, #1a73e8, #3b82f6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-weight: bold;
+      margin: 18px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .concept-card { 
+      background: #f8faff; 
+      border: 1px solid #d0e1fd; 
+      border-left: 5px solid #1a73e8; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      margin-bottom: 14px; 
+    }
+    .concept-card h3 { margin: 0 0 6px 0; font-size: 14px; color: #1a73e8; }
+    
+    .step-badge { 
+      display: inline-block; 
+      background: #e9ecef; 
+      color: #343a40; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #495057; 
+      margin: 10px 0 8px 0; 
+    }
+    
+    .step-badge-adv {
+      display: inline-block; 
+      background: #fee2e2; 
+      color: #991b1b; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #dc2626; 
+      margin: 12px 0 8px 0; 
+    }
+    
+    .problem-box { 
+      background: #ffffff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 8px; 
+      padding: 12px 15px; 
+      margin-bottom: 10px; 
+    }
+    .problem-title { font-weight: bold; font-size: 13.5px; color: #1e293b; margin-bottom: 5px; }
+    .problem-img { text-align: center; margin: 6px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    
+    .answer-line { 
+      min-height: 26px; 
+      border-bottom: 1px dashed #cbd5e1; 
+      margin-top: 6px; 
+      display: flex; 
+      align-items: flex-end; 
+      justify-content: flex-end; 
+      color: #94a3b8; 
+      font-size: 12px; 
+      padding-bottom: 2px; 
+    }
+    
+    .page-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 20px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+
+    /* 해설지 스타일 */
+    .ans-sheet-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0f766e;
+      border-bottom: 3px solid #0f766e;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-sub-title {
+      font-size: 14.5px;
+      font-weight: bold;
+      color: #1e293b;
+      background: #f0fdf4;
+      padding: 4px 10px;
+      border-left: 4px solid #16a34a;
+      margin: 12px 0 8px 0;
+      border-radius: 4px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .ans-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      width: 16%;
+      text-align: center;
+    }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: 09. 자료의 정리 (줄기와 잎 그림 & 기초 드릴)
+     ========================================== -->
+<div class="page">
+  <div class="cover-header">
+    <div>
+      <div class="sub">중1-2 수학 [Ⅳ. 통계] 통합 워크북</div>
+      <h1>Ⅳ. 통계 (09. 자료의 정리 &amp; 10. 상대도수)</h1>
+    </div>
+    <div class="meta">이름: ______________ | 날짜: ____.____.____</div>
+  </div>
+
+  <div class="section-banner">
+    <span>09. 자료의 정리와 그래프</span>
+    <span style="font-size: 12.5px; font-weight: normal;">줄기와 잎 그림 &amp; 도수분포표</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: 줄기와 잎 그림 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 줄기와 잎 그림 해석법</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="100%" height="160">
+  <rect x="5" y="5" width="410" height="170" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  
+  <text x="210" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">수학 성적 (줄기와 잎 그림)</text>
+
+  <!-- Table header -->
+  <line x1="140" y1="35" x2="140" y2="140" stroke="#333" stroke-width="2"/>
+  <line x1="40" y1="55" x2="380" y2="55" stroke="#999" stroke-width="1.5"/>
+
+  <text x="90" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">줄기 (십의 자리)</text>
+  <text x="260" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">잎 (일의 자리)</text>
+
+  <!-- Rows -->
+  <text x="90" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">6</text>
+  <text x="160" y="75" font-family="sans-serif" font-size="13">2 &nbsp;&nbsp; 5 &nbsp;&nbsp; 8</text>
+
+  <text x="90" y="98" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">7</text>
+  <text x="160" y="98" font-family="sans-serif" font-size="13">0 &nbsp;&nbsp; 3 &nbsp;&nbsp; 4 &nbsp;&nbsp; 7 &nbsp;&nbsp; 9</text>
+
+  <text x="90" y="121" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">8</text>
+  <text x="160" y="121" font-family="sans-serif" font-size="13">1 &nbsp;&nbsp; 2 &nbsp;&nbsp; 5 &nbsp;&nbsp; 5 &nbsp;&nbsp; 8</text>
+
+  <text x="90" y="144" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">9</text>
+  <text x="160" y="144" font-family="sans-serif" font-size="13">0 &nbsp;&nbsp; 4 &nbsp;&nbsp; 6</text>
+
+  <!-- Note -->
+  <rect x="250" y="148" width="130" height="20" rx="3" fill="#FFF" stroke="#E37400" stroke-width="1"/>
+  <text x="315" y="162" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E37400">(6 | 2 는 62점)</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 자료 해석 드릴 (01~04번)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">[01~04] 위 줄기와 잎 그림을 보고 물음에 답하시오.</div>
+    <div class="grid-2" style="font-size: 13px;">
+      <div><b>01.</b> 전체 학생 수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 명</div>
+      <div><b>02.</b> 잎이 가장 많은 줄기: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+      <div><b>03.</b> 점수가 가장 높은 학생의 점수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 점</div>
+      <div><b>04.</b> 점수가 80점 이상인 학생의 비율: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) %</div>
+    </div>
+  </div>
+
+  <div class="step-badge">STEP 1. 도수분포표 기본 용어 (05~08번)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[05~06] 계급값과 계급의 크기</div>
+      <b>05.</b> 계급이 60점 이상 70점 미만일 때, 이 계급의 <b>계급값</b>: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 점<br/>
+      <b>06.</b> 위 계급의 <b>계급의 크기</b>: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 점
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[07~08] 도수와 총합</div>
+      <b>07.</b> 한 계급에 속하는 자료의 개수를 무엇이라 하는가: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>08.</b> 모든 계급의 도수의 총합은 항상 무엇과 같은가: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )
+    </div>
+  </div>
+
+  <div class="page-footer">Page 1 / Ⅳ. 통계</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 2: 09. 자료의 정리 (히스토그램 & 다각형 넓이)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>09. 자료의 정리와 그래프</span>
+    <span style="font-size: 12.5px; font-weight: normal;">히스토그램과 도수분포다각형</span>
+  </div>
+
+  <!-- 비주얼 개념: 히스토그램과 다각형 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 히스토그램과 다각형의 넓이 성질</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" width="100%" height="190">
+  <!-- Axes -->
+  <line x1="50" y1="170" x2="430" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="170" x2="50" y2="20" stroke="#333" stroke-width="2"/>
+  <text x="435" y="174" font-family="sans-serif" font-size="11">점수(점)</text>
+  <text x="45" y="18" font-family="sans-serif" font-size="11">학생 수(명)</text>
+
+  <!-- Y Ticks: 2, 4, 6, 8 (step 15px per student => 30px per 2 students) -->
+  <!-- y=170 - n*15 -->
+  <text x="40" y="144" text-anchor="end" font-family="sans-serif" font-size="10">2</text>
+  <text x="40" y="114" text-anchor="end" font-family="sans-serif" font-size="10">4</text>
+  <text x="40" y="84" text-anchor="end" font-family="sans-serif" font-size="10">6</text>
+  <text x="40" y="54" text-anchor="end" font-family="sans-serif" font-size="10">8</text>
+
+  <!-- X Classes: 50, 60, 70, 80, 90, 100 (width=50px per class) -->
+  <!-- x = 70, 120, 170, 220, 270, 320, 370 -->
+  <!-- Bars:
+       50~60: 3명 (h=45, y=125)
+       60~70: 6명 (h=90, y=80)
+       70~80: 8명 (h=120, y=50)
+       80~90: 5명 (h=75, y=95)
+       90~100: 2명 (h=30, y=140)
+  -->
+  <rect x="120" y="125" width="50" height="45" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="1.5"/>
+  <rect x="170" y="80" width="50" height="90" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="1.5"/>
+  <rect x="220" y="50" width="50" height="120" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="1.5"/>
+  <rect x="270" y="95" width="50" height="75" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="1.5"/>
+  <rect x="320" y="140" width="50" height="30" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="1.5"/>
+
+  <!-- Frequency Polygon (Red) -->
+  <!-- Points: (95, 170), (145, 125), (195, 80), (245, 50), (295, 95), (345, 140), (395, 170) -->
+  <polyline points="95,170 145,125 195,80 245,50 295,95 345,140 395,170" fill="none" stroke="#D9381E" stroke-width="2.5"/>
+  <circle cx="145" cy="125" r="4" fill="#D9381E"/>
+  <circle cx="195" cy="80" r="4" fill="#D9381E"/>
+  <circle cx="245" cy="50" r="4" fill="#D9381E"/>
+  <circle cx="295" cy="95" r="4" fill="#D9381E"/>
+  <circle cx="345" cy="140" r="4" fill="#D9381E"/>
+
+  <!-- Ticks on X -->
+  <text x="120" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">50</text>
+  <text x="170" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">60</text>
+  <text x="220" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">70</text>
+  <text x="270" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">80</text>
+  <text x="320" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">90</text>
+  <text x="370" y="185" text-anchor="middle" font-family="sans-serif" font-size="10">100</text>
+
+  <text x="250" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">★ 히스토그램의 넓이 = 도수분포다각형의 넓이 = (계급의 크기 × 총 도수)</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 2. 유형별 집중 연습 (09~12번)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">09. [도수분포다각형의 넓이 계산]</div>
+      어느 학급 30명의 수학 점수를 나타낸 도수분포다각형이다. 계급의 크기가 10점일 때, 도수분포다각형과 가로축으로 둘러싸인 부분의 <b>총 넓이</b>를 구하시오.
+      <div class="answer-line">답: ________</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">10. [히스토그램 해석]</div>
+      위 히스토그램에서 점수가 70점 이상 90점 미만인 학생은 전체의 몇 %인지 구하시오. (전체 학생 24명 기준: 70~80점 8명, 80~90점 5명)
+      <div class="answer-line">답: ________ %</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">11. [성적이 우수한 학생 수]</div>
+      전체 학생 40명 중 성적이 상위 15% 이내에 들려면 최소 몇 점 이상이어야 하는가? (90~100점 2명, 80~90점 5명)
+      <div class="answer-line">답: ________ 점 이상</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">12. [평균 계산의 원리]</div>
+      도수분포표에서 평균을 구할 때 각 계급을 대표하는 값으로 사용하는 것은 무엇인가?
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 2 / Ⅳ. 통계</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 3: 10. 상대도수와 통계적 추론 (개념 & 찢어진 표 유형)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>10. 상대도수와 통계적 추론</span>
+    <span style="font-size: 12.5px; font-weight: normal;">상대도수의 뜻 &amp; 찢어진 도수분포표</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: 상대도수 공식 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 공식: 상대도수 (Relative Frequency)</h3>
+    <div style="font-size: 13px; color: #1e293b; display: flex; flex-direction: column; gap: 4px;">
+      <div>1. <b>상대도수 = (그 계급의 도수) ÷ (도수의 총합)</b></div>
+      <div>2. <b>그 계급의 도수 = (도수의 총합) × (상대도수)</b></div>
+      <div>3. <b>★ 상대도수의 총합은 항상 1 (또는 100%) 이다!</b></div>
+    </div>
+  </div>
+
+  <div class="step-badge">STEP 1 &amp; 2. 상대도수 계산 &amp; 찢어진 표 (13~16번)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">13. [상대도수 빈칸 채우기]</div>
+    어느 반 학생 50명 중 턱걸이를 10회 이상 15회 미만 한 학생이 12명일 때, 이 계급의 <b>상대도수</b>를 구하시오.
+    <div class="answer-line">답: ________</div>
+  </div>
+
+  <!-- 찢어진 도수분포표 문제 -->
+  <div class="problem-box">
+    <div class="problem-title">14. [도수분포표의 일부가 찢어진 문제 ★빈출]</div>
+    전체 학생 40명의 줄넘기 기록 도수분포표이다. 30회 이상 40회 미만인 계급의 도수가 얼룩으로 지워졌다. 30회 이상 40회 미만인 계급의 <b>상대도수가 0.35</b>일 때:<br/>
+    (1) 이 계급의 <b>도수(학생 수)</b>를 구하시오.<br/>
+    (2) 40회 이상인 학생이 전체의 20%일 때, 40회 이상인 학생 수를 구하시오.
+    <div class="answer-line">답: (1) ________ 명 &nbsp;|&nbsp; (2) ________ 명</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">15. [도수의 총합 역산하기]</div>
+      어떤 계급의 도수가 14명이고, 이 계급의 상대도수가 0.28일 때, 전체 조사의 <b>도수의 총합</b>을 구하시오.
+      <div class="answer-line">답: ________ 명</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">16. [상대도수의 비]</div>
+      도수의 비가 2 : 3 이고, 전체 도수의 비가 4 : 5 인 두 계급 A, B의 <b>상대도수의 비</b>를 가장 간단한 자연수의 비로 나타내시오.
+      <div class="answer-line">답: ________ : ________</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 3 / Ⅳ. 통계</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 4: 10. 상대도수와 통계적 추론 (두 집단 비교 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>10. 상대도수와 통계적 추론</span>
+    <span style="font-size: 12.5px; font-weight: normal;">두 집단의 분포 비교 심화</span>
+  </div>
+
+  <!-- 비주얼 개념: 두 집단 그래프 비교 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 도수의 총합이 다른 두 집단 비교</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 210" width="100%" height="180">
+  <line x1="50" y1="160" x2="420" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="160" x2="50" y2="20" stroke="#333" stroke-width="2"/>
+  <text x="425" y="165" font-family="sans-serif" font-size="11">독서 시간(시간)</text>
+  <text x="45" y="16" font-family="sans-serif" font-size="11">상대도수</text>
+
+  <!-- Y Ticks -->
+  <text x="40" y="135" text-anchor="end" font-family="sans-serif" font-size="10">0.1</text>
+  <text x="40" y="95" text-anchor="end" font-family="sans-serif" font-size="10">0.2</text>
+  <text x="40" y="55" text-anchor="end" font-family="sans-serif" font-size="10">0.3</text>
+
+  <!-- Class X: 2, 4, 6, 8, 10 -->
+  <!-- Group A (Blue): (2,0)->(100,160), (4,0.1)->(160,125), (6,0.35)->(220,40), (8,0.35)->(280,40), (10,0.2)->(340,90), (12,0)->(400,160) -->
+  <polyline points="100,160 160,125 220,40 280,40 340,90 400,160" fill="none" stroke="#1A73E8" stroke-width="2.5"/>
+  <circle cx="220" cy="40" r="4" fill="#1A73E8"/>
+  <circle cx="280" cy="40" r="4" fill="#1A73E8"/>
+
+  <!-- Group B (Red): (2,0)->(100,160), (4,0.25)->(160,70), (6,0.4)->(220,25), (8,0.25)->(280,70), (10,0.1)->(340,125), (12,0)->(400,160) -->
+  <polyline points="100,160 160,70 220,25 280,70 340,125 400,160" fill="none" stroke="#D9381E" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <circle cx="160" cy="70" r="4" fill="#D9381E"/>
+  <circle cx="220" cy="25" r="4" fill="#D9381E"/>
+
+  <!-- X ticks -->
+  <text x="100" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">2</text>
+  <text x="160" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">4</text>
+  <text x="220" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">6</text>
+  <text x="280" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">8</text>
+  <text x="340" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">10</text>
+  <text x="400" y="175" text-anchor="middle" font-family="sans-serif" font-size="10">12</text>
+
+  <!-- Legend -->
+  <rect x="290" y="25" width="130" height="40" rx="4" fill="#FFF" stroke="#CBD5E1"/>
+  <line x1="300" y1="38" x2="330" y2="38" stroke="#1A73E8" stroke-width="2.5"/>
+  <text x="335" y="42" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">A반 (실선)</text>
+
+  <line x1="300" y1="53" x2="330" y2="53" stroke="#D9381E" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <text x="335" y="57" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">B반 (점선)</text>
+
+  <text x="235" y="198" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">그래프가 오른쪽으로 치우칠수록 독서 시간이 더 긴 집단입니다 (A반 &gt; B반)</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 통계 심화 도전 (최고난도 수치형 2제)</div>
+
+  <!-- 심화 17: 두 집단 상대도수 비교 -->
+  <div class="problem-box">
+    <div class="problem-title">17. [두 집단 상대도수 비교 분석]</div>
+    A반(총 30명)과 B반(총 50명)의 주간 독서 시간 그래프이다. 독서 시간이 <b>6시간 이상 8시간 미만</b>인 계급에 대하여:<br/>
+    (1) A반에서 이 계급에 속하는 학생 수와 B반에서 이 계급에 속하는 학생 수를 각각 구하시오.<br/>
+    (단, A반 상대도수 = 0.30, B반 상대도수 = 0.24)<br/>
+    (2) 독서 시간이 8시간 이상인 학생의 <b>비율</b>이 더 높은 반은 어느 반인가? (A반 상대도수 0.35 vs B반 상대도수 0.20)
+    <div class="answer-line">답: (1) A반: ________ 명, B반: ________ 명 &nbsp;|&nbsp; (2) ________ 반</div>
+  </div>
+
+  <!-- 심화 18: 대푯값과 평균의 변화 -->
+  <div class="problem-box">
+    <div class="problem-title">18. [평균과 새로운 자료 추가 심화]</div>
+    학생 9명의 수학 성적의 평균이 78점이었다. 여기에 전학을 온 새로운 학생 1명의 성적을 추가하였더니 10명 전체의 평균이 80점이 되었다. 새로 전학 온 학생의 <b>수학 성적</b>을 구하시오.
+    <div class="answer-line" style="height: 45px;">답: ________ 점</div>
+  </div>
+
+  <div class="page-footer">Page 4 / Ⅳ. 통계</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 5: 정답 및 해설집 (맨 뒷페이지 분리)
+     ========================================== -->
+<div class="page">
+  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] Ⅳ. 통계 (09~10단원 완결본)</div>
+  <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">과외 선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
+
+  <!-- 09단원 해설 -->
+  <div class="ans-sub-title">09. 자료의 정리와 그래프 (1~12번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>01~04</th>
+      <td>
+        <b>01:</b> 16명 (3 + 5 + 5 + 3 = 16명)<br/>
+        <b>02:</b> 줄기 7과 줄기 8 (각각 5개로 가장 많음)<br/>
+        <b>03:</b> 96점<br/>
+        <b>04:</b> 50% (80점 이상인 학생 = 5 + 3 = 8명 ➔ 8/16 × 100 = 50%)
+      </td>
+    </tr>
+    <tr>
+      <th>05~08</th>
+      <td>
+        <b>05:</b> 65점 ((60 + 70) / 2 = 65)<br/>
+        <b>06:</b> 10점 (70 - 60 = 10)<br/>
+        <b>07:</b> 도수 (Frequency)<br/>
+        <b>08:</b> 전체 자료의 개수 (전체 학생 수)
+      </td>
+    </tr>
+    <tr>
+      <th>09~12</th>
+      <td>
+        <b>09:</b> <b>300</b> (도수분포다각형의 넓이 = 계급의 크기(10) × 총 도수(30) = 300)<br/>
+        <b>10:</b> <b>54.2% (또는 13/24 ≈ 54.2%)</b> (70~90점 학생 수 = 8 + 5 = 13명 ➔ 13/24 × 100 ≈ 54.2%)<br/>
+        <b>11:</b> <b>80점 이상</b> (상위 15%는 40 × 0.15 = 6등까지. 90~100점 2명 + 80~90점 5명(누적 7명)이므로 80점 이상이어야 함)<br/>
+        <b>12:</b> 계급값
+      </td>
+    </tr>
+  </table>
+
+  <!-- 10단원 해설 -->
+  <div class="ans-sub-title">10. 상대도수와 통계적 추론 (13~18번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>13~16</th>
+      <td>
+        <b>13:</b> <b>0.24</b> (12 ÷ 50 = 0.24)<br/>
+        <b>14:</b> <b>(1) 14명</b> (40 × 0.35 = 14명) &nbsp;|&nbsp; <b>(2) 8명</b> (40 × 0.20 = 8명)<br/>
+        <b>15:</b> <b>50명</b> (도수의 총합 = 도수 ÷ 상대도수 = 14 ÷ 0.28 = 50명)<br/>
+        <b>16:</b> <b>5 : 6</b> (상대도수 = 도수/총도수 이므로 (2/4) : (3/5) = 1/2 : 3/5 = 5 : 6)
+      </td>
+    </tr>
+    <tr>
+      <th>17~18 (심화)</th>
+      <td>
+        <b>17-(1):</b> <b>A반 9명, B반 12명</b> (A반: 30 × 0.30 = 9명, B반: 50 × 0.24 = 12명)<br/>
+        <b>17-(2):</b> <b>A반</b> (비율을 비교할 때는 상대도수를 보아야 합니다. A반 0.35 &gt; B반 0.20 이므로 A반의 비율이 더 높음)<br/><br/>
+        <b>18:</b> <b>98점</b><br/>
+        <b>[친절 풀이]:</b> 9명의 점수 총합 = 9 × 78 = 702점.<br/>
+        새 학생 포함 10명의 점수 총합 = 10 × 80 = 800점.<br/>
+        따라서 새로 전학 온 학생의 점수 = 800 - 702 = <b>98점</b>
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-footer">Page 5 (정답 및 해설집) / Ⅳ. 통계</div>
+</div>
+
+</body>
+</html>

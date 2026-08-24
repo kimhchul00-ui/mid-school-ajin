@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>[중1 수학] Ⅰ. 기본 도형 대단원 통합 워크북 (완결본)</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f4f6f8; color: #212529; padding: 20px; line-height: 1.6; }
+    
+    .page { 
+      max-width: 840px; 
+      margin: 0 auto 30px auto; 
+      background: white; 
+      padding: 36px 45px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+      position: relative;
+    }
+    
+    .cover-header { 
+      border-bottom: 3px solid #1a73e8; 
+      padding-bottom: 12px; 
+      margin-bottom: 18px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+    .cover-header h1 { margin: 0; font-size: 24px; color: #1a73e8; }
+    .cover-header .sub { font-size: 13px; color: #e37400; font-weight: bold; }
+    .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
+    
+    .section-banner {
+      background: linear-gradient(90deg, #1a73e8, #3b82f6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-weight: bold;
+      margin: 18px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .concept-card { 
+      background: #f8faff; 
+      border: 1px solid #d0e1fd; 
+      border-left: 5px solid #1a73e8; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      margin-bottom: 14px; 
+    }
+    .concept-card h3 { margin: 0 0 6px 0; font-size: 14px; color: #1a73e8; }
+    
+    .step-badge { 
+      display: inline-block; 
+      background: #e9ecef; 
+      color: #343a40; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #495057; 
+      margin: 10px 0 8px 0; 
+    }
+    
+    .step-badge-adv {
+      display: inline-block; 
+      background: #fee2e2; 
+      color: #991b1b; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #dc2626; 
+      margin: 12px 0 8px 0; 
+    }
+    
+    .problem-box { 
+      background: #ffffff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 8px; 
+      padding: 12px 15px; 
+      margin-bottom: 10px; 
+    }
+    .problem-title { font-weight: bold; font-size: 13.5px; color: #1e293b; margin-bottom: 5px; }
+    .problem-img { text-align: center; margin: 6px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    
+    .answer-line { 
+      min-height: 26px; 
+      border-bottom: 1px dashed #cbd5e1; 
+      margin-top: 6px; 
+      display: flex; 
+      align-items: flex-end; 
+      justify-content: flex-end; 
+      color: #94a3b8; 
+      font-size: 12px; 
+      padding-bottom: 2px; 
+    }
+    
+    .page-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 20px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+
+    /* 해설지 스타일 */
+    .ans-sheet-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0f766e;
+      border-bottom: 3px solid #0f766e;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-sub-title {
+      font-size: 14.5px;
+      font-weight: bold;
+      color: #1e293b;
+      background: #f0fdf4;
+      padding: 4px 10px;
+      border-left: 4px solid #16a34a;
+      margin: 12px 0 8px 0;
+      border-radius: 4px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .ans-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      width: 16%;
+      text-align: center;
+    }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: 01. 점, 선, 면, 각 (개념 & 기초 드릴)
+     ========================================== -->
+<div class="page">
+  <div class="cover-header">
+    <div>
+      <div class="sub">중1-2 수학 [Ⅰ. 기본 도형] 통합 워크북</div>
+      <h1>Ⅰ. 기본 도형 (01~04단원 완결본)</h1>
+    </div>
+    <div class="meta">이름: ______________ | 날짜: ____.____.____</div>
+  </div>
+
+  <div class="section-banner">
+    <span>01. 점, 선, 면, 각</span>
+    <span style="font-size: 12.5px; font-weight: normal;">기본 정의 &amp; 기호 표현</span>
+  </div>
+
+  <div class="concept-card">
+    <h3>⚡ 1분 비주얼 핵심 개념: 직선, 반직선, 선분의 차이</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- 1. 직선 AB -->
+  <g transform="translate(10, 15)">
+    <line x1="30" y1="20" x2="220" y2="20" stroke="#1A73E8" stroke-width="2.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+    <circle cx="70" cy="20" r="4" fill="#1A73E8"/>
+    <circle cx="180" cy="20" r="4" fill="#1A73E8"/>
+    <text x="70" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
+    <text x="180" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
+    <text x="125" y="62" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">직선 AB (양쪽 끝없이 연장)</text>
+  </g>
+
+  <!-- 2. 선분 AB -->
+  <g transform="translate(280, 15)">
+    <line x1="70" y1="20" x2="180" y2="20" stroke="#188038" stroke-width="2.5"/>
+    <circle cx="70" cy="20" r="5" fill="#188038"/>
+    <circle cx="180" cy="20" r="5" fill="#188038"/>
+    <text x="70" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
+    <text x="180" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
+    <text x="125" y="62" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">선분 AB (A에서 B까지의 거리)</text>
+  </g>
+
+  <!-- 3. 반직선 AB vs BA -->
+  <g transform="translate(10, 95)">
+    <line x1="70" y1="20" x2="220" y2="20" stroke="#D9381E" stroke-width="2.5" marker-end="url(#ar)"/>
+    <circle cx="70" cy="20" r="5" fill="#D9381E"/>
+    <circle cx="180" cy="20" r="4" fill="#D9381E"/>
+    <text x="70" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">A (시작)</text>
+    <text x="180" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">B (방향)</text>
+    <text x="125" y="62" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">반직선 AB (A에서 시작 ➔ B 방향)</text>
+  </g>
+
+  <g transform="translate(280, 95)">
+    <line x1="180" y1="20" x2="30" y2="20" stroke="#E37400" stroke-width="2.5" marker-end="url(#ar)"/>
+    <circle cx="70" cy="20" r="4" fill="#E37400"/>
+    <circle cx="180" cy="20" r="5" fill="#E37400"/>
+    <text x="70" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">A (방향)</text>
+    <text x="180" y="42" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">B (시작)</text>
+    <text x="125" y="62" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E37400">반직선 BA (B에서 시작 ➔ A 방향)</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 확인 드릴 (8제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[01~04] 교점과 교선 (오각기둥)</div>
+      <b>01.</b> 꼭짓점의 개수 (교점의 개수): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>02.</b> 모서리의 개수 (교선의 개수): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>03.</b> 면의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>04.</b> 원기둥에서 교선의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[05~08] 직선/반직선/선분의 같고 다름 (○, ✕)</div>
+      (A, B, C가 순서대로 있을 때)<br/>
+      <b>05.</b> 직선 AB 와 직선 BA ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>06.</b> 선분 AC 와 선분 CA ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>07.</b> 반직선 AB 와 반직선 BA ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>08.</b> 반직선 AB 와 반직선 AC ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )
+    </div>
+  </div>
+
+  <div class="page-footer">Page 1 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 2: 01. 점, 선, 면, 각 (유형 & 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>01. 점, 선, 면, 각</span>
+    <span style="font-size: 12.5px; font-weight: normal;">유형 연습 &amp; 심화 도전</span>
+  </div>
+
+  <div class="step-badge">STEP 2. 핵심 유형 연습</div>
+
+  <div class="problem-box">
+    <div class="problem-title">09. [선분의 중점 계산]</div>
+    아래 그림에서 점 M은 선분 AB의 중점이고, 점 N은 선분 MB의 중점이다. 선분 AB = 24 cm일 때, 선분 AN의 길이를 구하시오.
+    <div class="problem-img">
+      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="100%" height="110">
+  <line x1="40" y1="50" x2="420" y2="50" stroke="#333" stroke-width="2.5"/>
+  <circle cx="40" cy="50" r="5" fill="#1A73E8"/>
+  <circle cx="230" cy="50" r="5" fill="#D9381E"/>
+  <circle cx="325" cy="50" r="5" fill="#188038"/>
+  <circle cx="420" cy="50" r="5" fill="#1A73E8"/>
+
+  <text x="40" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">A</text>
+  <text x="230" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">M (AB의 중점)</text>
+  <text x="325" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">N (MB의 중점)</text>
+  <text x="420" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">B</text>
+
+  <!-- Dimension brackets -->
+  <line x1="40" y1="25" x2="420" y2="25" stroke="#666" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="230" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">AB = 24 cm</text>
+</svg>
+</div>
+    </div>
+    <div class="answer-line">답: AN = ________ cm</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">10. [맞꼭지각과 직각 방정식]</div>
+      직선 AB와 CD가 점 O에서 만나고 ∠EOB = 90°일 때, x의 값을 구하시오.
+      <div class="problem-img">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 240" width="100%" height="200">
+  <!-- Lines -->
+  <line x1="40" y1="140" x2="410" y2="140" stroke="#222" stroke-width="2"/>
+  <text x="20" y="145" font-family="sans-serif" font-size="14" font-weight="bold">A</text>
+  <text x="420" y="145" font-family="sans-serif" font-size="14" font-weight="bold">B</text>
+
+  <line x1="90" y1="20" x2="350" y2="260" stroke="#222" stroke-width="2"/>
+  <text x="80" y="20" font-family="sans-serif" font-size="14" font-weight="bold">C</text>
+  <text x="360" y="235" font-family="sans-serif" font-size="14" font-weight="bold">D</text>
+
+  <line x1="220" y1="140" x2="220" y2="25" stroke="#1A73E8" stroke-width="2"/>
+  <text x="220" y="18" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1A73E8">E</text>
+
+  <!-- Right angle at EOB -->
+  <polyline points="220,120 240,120 240,140" fill="none" stroke="#1A73E8" stroke-width="2"/>
+
+  <!-- Angle COE Arc -->
+  <path d="M 175 100 A 60 60 0 0 1 220 80" fill="none" stroke="#D9381E" stroke-width="2"/>
+  <!-- Angle COE Label Badge (선과 겹치지 않는 위치) -->
+  <rect x="110" y="55" width="70" height="24" rx="5" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="145" y="71" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">x + 15°</text>
+
+  <!-- Angle BOD Arc -->
+  <path d="M 280 140 A 60 60 0 0 1 262 170" fill="none" stroke="#188038" stroke-width="2"/>
+  <!-- Angle BOD Label Badge (선과 겹치지 않는 위치) -->
+  <rect x="275" y="165" width="74" height="24" rx="5" fill="#F4FFF4" stroke="#188038" stroke-width="1.5"/>
+  <text x="312" y="181" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">2x - 15°</text>
+
+  <circle cx="220" cy="140" r="3" fill="#222"/>
+  <text x="205" y="160" font-family="sans-serif" font-size="12" fill="#666">O</text>
+</svg>
+</div>
+      </div>
+      <div class="answer-line">답: x = ________</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">11. [점과 직선 사이의 거리]</div>
+      직사각형 ABCD에서 AB = 8 cm, AD = 6 cm이다.<br/>
+      (1) 점 A와 직선 CD 사이의 거리: ________ cm<br/>
+      (2) 점 B와 직선 AD 사이의 거리: ________ cm
+      <div class="answer-line" style="margin-top: 20px;">답: (1) ________ cm &nbsp;|&nbsp; (2) ________ cm</div>
+    </div>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 01 심화 도전 (최고난도 단답형 2제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">12. [시계 시침과 분침의 각도]</div>
+      시계가 <b>3시 40분</b>을 가리킬 때, 두 바늘이 이루는 작은 쪽의 각의 크기를 구하시오.
+      <div class="problem-img">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 260" width="100%" height="230">
+  <circle cx="170" cy="125" r="100" fill="#F8FAFC" stroke="#222" stroke-width="2.5"/>
+  <circle cx="170" cy="125" r="4" fill="#222"/>
+
+  <!-- Numbers -->
+  <text x="170" y="45" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">12</text>
+  <text x="255" y="130" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">3</text>
+  <text x="170" y="215" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">6</text>
+  <text x="85" y="130" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">9</text>
+  <text x="110" y="190" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">8</text>
+  <text x="230" y="190" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">4</text>
+
+  <!-- Hands -->
+  <line x1="170" y1="125" x2="217" y2="142" stroke="#D9381E" stroke-width="4.5" stroke-linecap="round"/>
+  <text x="230" y="145" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">시침</text>
+  
+  <line x1="170" y1="125" x2="100" y2="165" stroke="#1A73E8" stroke-width="3" stroke-linecap="round"/>
+  <text x="75" y="180" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">분침</text>
+
+  <!-- Large angle arc & Badge -->
+  <path d="M 130 148 A 50 50 0 0 0 200 136" fill="none" stroke="#E37400" stroke-width="2.5"/>
+  <rect x="135" y="165" width="70" height="26" rx="5" fill="#FFFDF0" stroke="#E37400" stroke-width="1.5"/>
+  <text x="170" y="182" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#E37400">∠θ = ?</text>
+
+  <text x="170" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222">3시 40분에 두 바늘이 이루는 각의 크기</text>
+</svg>
+</div>
+      </div>
+      <div class="answer-line">답: ________ °</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">13. [선분의 연쇄 중점 계산]</div>
+      한 직선 위에 순서대로 점 A, B, C, D가 있다. 점 B는 선분 AC의 중점이고, 점 C는 선분 BD의 중점이다. 선분 AD = 36 cm일 때, 선분 BC의 길이를 구하시오.
+      <div class="answer-line" style="height: 60px;">답: BC = ________ cm</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 2 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 3: 02. 위치 관계 (기초 드릴 & 직육면체)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>02. 위치 관계</span>
+    <span style="font-size: 12.5px; font-weight: normal;">평행, 수직, 꼬인 위치</span>
+  </div>
+
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 공간에서 두 직선의 위치 관계</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <!-- Card 1: 한 평면 위 - 만남/평행 -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="125" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">1. 한 평면 위에 있는 경우</text>
+    
+    <!-- Meeting -->
+    <line x1="25" y1="55" x2="105" y2="105" stroke="#333" stroke-width="2"/>
+    <line x1="25" y1="105" x2="105" y2="55" stroke="#333" stroke-width="2"/>
+    <text x="65" y="125" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold">한 점에서 만난다</text>
+
+    <!-- Parallel -->
+    <line x1="145" y1="65" x2="225" y2="65" stroke="#1A73E8" stroke-width="2"/>
+    <line x1="145" y1="95" x2="225" y2="95" stroke="#1A73E8" stroke-width="2"/>
+    <text x="185" y="125" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">평행하다 (l // m)</text>
+  </g>
+
+  <!-- Card 2: 꼬인 위치 (한 평면 위에 있지 않음) -->
+  <g transform="translate(280, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="125" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">2. 꼬인 위치 (공간에서만 존재!)</text>
+    
+    <!-- Plane and lines -->
+    <polygon points="40,115 160,115 210,65 90,65" fill="rgba(217,56,30,0.1)" stroke="#D9381E" stroke-width="1.5"/>
+    <!-- Line on plane -->
+    <line x1="60" y1="90" x2="180" y2="90" stroke="#333" stroke-width="2"/>
+    <text x="190" y="94" font-family="sans-serif" font-size="11">l</text>
+    <!-- Vertical line passing through without intersecting -->
+    <line x1="125" y1="35" x2="125" y2="145" stroke="#D9381E" stroke-width="2.5"/>
+    <text x="135" y="42" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">m</text>
+
+    <text x="125" y="145" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">만나지도 않고 평행하지도 않음</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1 &amp; 2. 직육면체에서의 위치 관계 (14~18번)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">[14~18] 아래 직육면체 ABCD-EFGH를 보고 물음에 답하시오.</div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" width="100%" height="220">
+  <!-- Cuboid ABCD-EFGH -->
+  <!-- Top Face: A(70,50), B(220,50), C(280,95), D(130,95) -->
+  <!-- Bottom Face: E(70,160), F(220,160), G(280,205), H(130,205) -->
+  
+  <!-- Back / Hidden edges (Dashed) -->
+  <line x1="70" y1="50" x2="70" y2="160" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="70" y1="160" x2="220" y2="160" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="70" y1="160" x2="130" y2="205" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Solid edges -->
+  <!-- Top Face -->
+  <polygon points="70,50 220,50 280,95 130,95" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+  
+  <!-- Front vertical edges -->
+  <line x1="220" y1="50" x2="220" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="280" y1="95" x2="280" y2="205" stroke="#333" stroke-width="2"/>
+  <line x1="130" y1="95" x2="130" y2="205" stroke="#333" stroke-width="2"/>
+
+  <!-- Bottom front edges -->
+  <line x1="130" y1="205" x2="280" y2="205" stroke="#333" stroke-width="2"/>
+  <line x1="220" y1="160" x2="280" y2="205" stroke="#333" stroke-width="2"/>
+
+  <!-- Vertex Dots & Labels -->
+  <!-- A -->
+  <circle cx="70" cy="50" r="4" fill="#1A73E8"/>
+  <text x="55" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">A</text>
+  
+  <!-- B -->
+  <circle cx="220" cy="50" r="4" fill="#1A73E8"/>
+  <text x="225" y="45" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">B</text>
+
+  <!-- C -->
+  <circle cx="280" cy="95" r="4" fill="#1A73E8"/>
+  <text x="292" y="98" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">C</text>
+
+  <!-- D -->
+  <circle cx="130" cy="95" r="4" fill="#1A73E8"/>
+  <text x="115" y="98" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">D</text>
+
+  <!-- E -->
+  <circle cx="70" cy="160" r="4" fill="#555"/>
+  <text x="55" y="165" font-family="sans-serif" font-size="13" font-weight="bold">E</text>
+
+  <!-- F -->
+  <circle cx="220" cy="160" r="4" fill="#555"/>
+  <text x="228" y="165" font-family="sans-serif" font-size="13" font-weight="bold">F</text>
+
+  <!-- G -->
+  <circle cx="280" cy="205" r="4" fill="#555"/>
+  <text x="292" y="210" font-family="sans-serif" font-size="13" font-weight="bold">G</text>
+
+  <!-- H -->
+  <circle cx="130" cy="205" r="4" fill="#555"/>
+  <text x="115" y="215" font-family="sans-serif" font-size="13" font-weight="bold">H</text>
+
+  <text x="190" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">직육면체 ABCD-EFGH</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1.1; font-size: 12.5px; display: flex; flex-direction: column; gap: 8px;">
+        <div><b>14.</b> 모서리 AB와 한 점에서 만나는 모서리 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+        <div><b>15.</b> 모서리 AB와 평행한 모서리 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+        <div><b>16.</b> 모서리 AB와 <b>꼬인 위치</b>에 있는 모서리 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+        <div><b>17.</b> 면 ABCD와 평행한 면: 면 ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        <div><b>18.</b> 면 ABCD와 수직인 면의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 3 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 4: 02. 위치 관계 (삼각기둥 & 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>02. 위치 관계</span>
+    <span style="font-size: 12.5px; font-weight: normal;">삼각기둥 분석 &amp; 심화 도전</span>
+  </div>
+
+  <div class="step-badge">STEP 2. 삼각기둥 위치 관계 집중 연습</div>
+
+  <div class="problem-box">
+    <div class="problem-title">[19~21] 아래 삼각기둥 ABC-DEF를 보고 물음에 답하시오.</div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250" width="100%" height="220">
+  <!-- Triangular Prism ABC-DEF -->
+  <!-- Top Triangle: A(160,35), B(60,85), C(240,85) -->
+  <!-- Bottom Triangle: D(160,155), E(60,205), F(240,205) -->
+  
+  <!-- Dashed edge AD -->
+  <line x1="160" y1="35" x2="160" y2="155" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="60" y1="205" x2="160" y2="155" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="240" y1="205" x2="160" y2="155" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Top Triangle -->
+  <polygon points="160,35 60,85 240,85" fill="rgba(24,128,56,0.12)" stroke="#188038" stroke-width="2"/>
+
+  <!-- Front vertical edges -->
+  <line x1="60" y1="85" x2="60" y2="205" stroke="#333" stroke-width="2"/>
+  <line x1="240" y1="85" x2="240" y2="205" stroke="#333" stroke-width="2"/>
+  
+  <!-- Bottom Front edge -->
+  <line x1="60" y1="205" x2="240" y2="205" stroke="#333" stroke-width="2"/>
+
+  <!-- Points -->
+  <circle cx="160" cy="35" r="4" fill="#188038"/>
+  <text x="160" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">A</text>
+
+  <circle cx="60" cy="85" r="4" fill="#188038"/>
+  <text x="45" y="88" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">B</text>
+
+  <circle cx="240" cy="85" r="4" fill="#188038"/>
+  <text x="252" y="88" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">C</text>
+
+  <circle cx="160" cy="155" r="4" fill="#777"/>
+  <text x="172" y="155" font-family="sans-serif" font-size="13" font-weight="bold" fill="#777">D</text>
+
+  <circle cx="60" cy="205" r="4" fill="#333"/>
+  <text x="45" y="215" font-family="sans-serif" font-size="13" font-weight="bold">E</text>
+
+  <circle cx="240" cy="205" r="4" fill="#333"/>
+  <text x="252" y="215" font-family="sans-serif" font-size="13" font-weight="bold">F</text>
+
+  <text x="150" y="240" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">삼각기둥 ABC-DEF</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1.1; font-size: 12.5px; display: flex; flex-direction: column; gap: 8px;">
+        <div><b>19.</b> 모서리 BC와 <b>꼬인 위치</b> 모서리 모두 쓰기:<br/>➔ ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+        <div><b>20.</b> 면 DEF와 평행한 모서리 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+        <div><b>21.</b> 모서리 AD를 포함하는 면의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 02 심화 도전 (최고난도 2제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">22. [공간 위치 관계 참/거짓 판단]</div>
+      공간에서 서로 다른 세 직선 l, m, n과 서로 다른 두 평면 P, Q에 대하여 <b>항상 옳은 것</b>은?<br/>
+      ① l ⊥ m, m ⊥ n 이면 l // n<br/>
+      ② l // P, m // P 이면 l // m<br/>
+      ③ l ⊥ P, l ⊥ Q 이면 P // Q<br/>
+      ④ P ⊥ Q, Q ⊥ R 이면 P // R
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">23. [정사면체에서 꼬인 위치]</div>
+      정사면체 ABCD에서 모서리 AB와 꼬인 위치에 있는 모서리의 개수를 구하시오.
+      <div class="answer-line" style="margin-top: 25px;">답: ________ 개</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 4 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 5: 03. 평행선의 성질 (개념, 유형, 꺾인선, 종이접기 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>03. 평행선의 성질</span>
+    <span style="font-size: 12.5px; font-weight: normal;">동위각, 엇각, 꺾인 선 &amp; 종이접기</span>
+  </div>
+
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 평행선에서의 동위각과 엇각</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <!-- Card 1: 동위각 -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="125" y="22" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#1A73E8">1. 동위각 (같은 위치의 각, F자)</text>
+    
+    <line x1="20" y1="65" x2="230" y2="65" stroke="#333" stroke-width="2"/>
+    <line x1="20" y1="115" x2="230" y2="115" stroke="#333" stroke-width="2"/>
+    <line x1="60" y1="145" x2="170" y2="35" stroke="#333" stroke-width="2"/>
+    <text x="235" y="68" font-family="sans-serif" font-size="11">l</text>
+    <text x="235" y="118" font-family="sans-serif" font-size="11">m</text>
+
+    <!-- Angle a Badge -->
+    <path d="M 160 65 A 25 25 0 0 0 152 50" fill="none" stroke="#1A73E8" stroke-width="2"/>
+    <rect x="160" y="40" width="34" height="20" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="177" y="54" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#1A73E8">∠a</text>
+
+    <!-- Angle b Badge -->
+    <path d="M 110 115 A 25 25 0 0 0 102 100" fill="none" stroke="#1A73E8" stroke-width="2"/>
+    <rect x="115" y="90" width="34" height="20" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="132" y="104" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#1A73E8">∠b</text>
+
+    <text x="125" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">l // m 이면 ∠a = ∠b</text>
+  </g>
+
+  <!-- Card 2: 엇각 -->
+  <g transform="translate(280, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="125" y="22" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="bold" fill="#D9381E">2. 엇각 (엇갈린 위치의 각, Z자)</text>
+    
+    <line x1="20" y1="65" x2="230" y2="65" stroke="#333" stroke-width="2"/>
+    <line x1="20" y1="115" x2="230" y2="115" stroke="#333" stroke-width="2"/>
+    <line x1="60" y1="145" x2="170" y2="35" stroke="#333" stroke-width="2"/>
+    <text x="235" y="68" font-family="sans-serif" font-size="11">l</text>
+    <text x="235" y="118" font-family="sans-serif" font-size="11">m</text>
+
+    <!-- Angle c Badge -->
+    <path d="M 120 65 A 25 25 0 0 0 130 80" fill="none" stroke="#D9381E" stroke-width="2"/>
+    <rect x="75" y="75" width="34" height="20" rx="4" fill="#FCE8E6" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="92" y="89" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#D9381E">∠c</text>
+
+    <!-- Angle d Badge -->
+    <path d="M 110 115 A 25 25 0 0 0 100 100" fill="none" stroke="#D9381E" stroke-width="2"/>
+    <rect x="115" y="90" width="34" height="20" rx="4" fill="#FCE8E6" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="132" y="104" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#D9381E">∠d</text>
+
+    <text x="125" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">l // m 이면 ∠c = ∠d</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1 &amp; 2. 동위각/엇각 및 꺾인 선 유형 (24~25번)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">24. [동위각과 엇각의 크기 구하기]</div>
+      두 직선 l과 m이 평행할 때, ∠x와 ∠y의 크기를 각각 구하시오.<br/>
+      (단, l과 만나는 한 교각이 65°이고, m과 만나는 엇각이 ∠x, 동위각의 보각이 ∠y)
+      <div class="answer-line" style="margin-top: 20px;">답: ∠x = ________° , ∠y = ________°</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">25. [꺾인 선이 있는 평행선 응용]</div>
+      아래 그림에서 l // m 일 때, ∠x의 크기를 구하시오.
+      <div class="problem-img">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 240" width="100%" height="200">
+  <line x1="30" y1="40" x2="420" y2="40" stroke="#222" stroke-width="2"/>
+  <text x="425" y="45" font-family="sans-serif" font-size="14" font-weight="bold">l</text>
+
+  <line x1="30" y1="200" x2="420" y2="200" stroke="#222" stroke-width="2"/>
+  <text x="425" y="205" font-family="sans-serif" font-size="14" font-weight="bold">m</text>
+
+  <!-- Auxiliary parallel line n -->
+  <line x1="30" y1="120" x2="420" y2="120" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="425" y="125" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">n (보조선)</text>
+
+  <line x1="80" y1="40" x2="260" y2="120" stroke="#1A73E8" stroke-width="3"/>
+  <line x1="260" y1="120" x2="120" y2="200" stroke="#1A73E8" stroke-width="3"/>
+  <circle cx="260" cy="120" r="5" fill="#D9381E"/>
+
+  <!-- Angle 35° Arc & Badge -->
+  <path d="M 125 40 A 45 45 0 0 1 112 55" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="115" y="55" width="44" height="22" rx="4" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+  <text x="137" y="70" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">35°</text>
+
+  <!-- Angle x Arc & Badge -->
+  <path d="M 215 100 A 50 50 0 0 0 218 144" fill="none" stroke="#D9381E" stroke-width="2.5"/>
+  <rect x="155" y="108" width="46" height="24" rx="5" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="178" y="124" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">∠x</text>
+
+  <!-- Angle 45° Arc & Badge -->
+  <path d="M 155 200 A 45 45 0 0 0 162 176" fill="none" stroke="#333" stroke-width="2"/>
+  <rect x="160" y="165" width="44" height="22" rx="4" fill="#FFFFFF" stroke="#333333" stroke-width="1.5"/>
+  <text x="182" y="180" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">45°</text>
+</svg>
+</div>
+      </div>
+      <div class="answer-line">답: ∠x = ________°</div>
+    </div>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 03 심화 도전 (종이 접기 최고난도)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">26. [직사각형 종이 테이프 접기 심화]</div>
+    아래 그림과 같이 폭이 일정한 직사각형 모양의 종이 테이프를 선분 EF를 접는 선으로 하여 접었다. ∠GEF = 55°일 때, ∠x의 크기를 구하시오.
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 230" width="100%" height="200">
+  <line x1="20" y1="40" x2="440" y2="40" stroke="#222" stroke-width="2"/>
+  <line x1="20" y1="190" x2="440" y2="190" stroke="#222" stroke-width="2"/>
+
+  <!-- Fold line EF -->
+  <line x1="140" y1="40" x2="280" y2="190" stroke="#D9381E" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <text x="125" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#D9381E">E</text>
+  <text x="290" y="205" font-family="sans-serif" font-size="14" font-weight="bold" fill="#D9381E">F</text>
+
+  <!-- Folded blue area -->
+  <polygon points="140,40 280,190 380,190 240,40" fill="rgba(26,115,232,0.12)" stroke="#1A73E8" stroke-width="2.5"/>
+  <polygon points="140,40 280,190 190,190 50,40" fill="rgba(0,0,0,0.03)" stroke="#888" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Angle 55° Arc & Badge -->
+  <path d="M 180 40 A 40 40 0 0 1 163 65" fill="none" stroke="#1A73E8" stroke-width="2"/>
+  <rect x="180" y="55" width="46" height="22" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="203" y="70" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">55°</text>
+
+  <!-- Angle x Arc & Badge -->
+  <path d="M 240 190 A 45 45 0 0 1 257 165" fill="none" stroke="#D9381E" stroke-width="2.5"/>
+  <rect x="195" y="145" width="46" height="24" rx="5" fill="#FCE8E6" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="218" y="161" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">∠x</text>
+
+  <text x="230" y="222" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">접은 각(55°)과 엇각의 크기는 서로 같습니다.</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1; font-size: 12.5px;">
+        💡 <b>핵심 힌트:</b><br/>
+        1. <b>접은 각 = 원래 각:</b> ∠G'EF = ∠GEF = 55°<br/>
+        2. <b>엇각:</b> ∠EFD = ∠GEF = 55°<br/>
+        3. 평각(180°) 또는 삼각형을 이용하여 ∠x 계산!
+        <div class="answer-line" style="margin-top: 25px;">답: ∠x = ________°</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 5 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 6: 04. 작도와 합동 (개념, 삼각형 결정 조건, 회전 합동 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>04. 작도와 합동</span>
+    <span style="font-size: 12.5px; font-weight: normal;">삼각형의 작도 &amp; 3대 합동 조건</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: SSS, SAS, ASA -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼: 삼각형의 3대 합동 조건</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="180">
+  <!-- SSS -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="185" height="180" rx="8" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="92" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">1. SSS 합동</text>
+    <polygon points="35,120 150,120 90,45" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+    <!-- Side marks -->
+    <text x="92" y="135" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1A73E8">밑변 동일</text>
+    <text x="50" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1A73E8">변 1</text>
+    <text x="130" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1A73E8">변 2</text>
+    <rect x="25" y="145" width="135" height="24" rx="4" fill="#FFFFFF" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="92" y="161" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">세 변의 길이 각각 같음</text>
+  </g>
+
+  <!-- SAS -->
+  <g transform="translate(205, 10)">
+    <rect x="0" y="0" width="185" height="180" rx="8" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="92" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">2. SAS 합동</text>
+    <polygon points="35,120 150,120 90,45" fill="rgba(217,56,30,0.1)" stroke="#D9381E" stroke-width="2"/>
+    <!-- Angle mark at bottom left -->
+    <path d="M 55 120 A 20 20 0 0 0 45 107" fill="none" stroke="#D9381E" stroke-width="2"/>
+    <text x="40" y="75" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#D9381E">변 1</text>
+    <text x="92" y="135" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#D9381E">변 2</text>
+    <rect x="20" y="145" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="92" y="161" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">두 변 + 그 끼인각</text>
+  </g>
+
+  <!-- ASA -->
+  <g transform="translate(400, 10)">
+    <rect x="0" y="0" width="190" height="180" rx="8" fill="#F4FFF4" stroke="#CCE2CE"/>
+    <text x="95" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">3. ASA 합동</text>
+    <polygon points="35,120 155,120 95,45" fill="rgba(24,128,56,0.1)" stroke="#188038" stroke-width="2"/>
+    <!-- Angles at bottom left and right -->
+    <path d="M 55 120 A 20 20 0 0 0 45 107" fill="none" stroke="#188038" stroke-width="2"/>
+    <path d="M 135 120 A 20 20 0 0 1 145 107" fill="none" stroke="#188038" stroke-width="2"/>
+    <text x="95" y="135" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#188038">한 변의 길이</text>
+    <rect x="22" y="145" width="145" height="24" rx="4" fill="#FFFFFF" stroke="#188038" stroke-width="1.5"/>
+    <text x="95" y="161" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#188038">한 변 + 그 양 끝각</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1 &amp; 2. 삼각형 작도 조건 &amp; 합동 판별 (27~29번)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">27. [삼각형이 하나로 정해지는 조건]</div>
+      다음 중 삼각형 ABC가 <b>하나로 정해지지 않는 것</b>을 고르시오.<br/>
+      ① a = 4 cm, b = 5 cm, c = 7 cm<br/>
+      ② a = 3 cm, b = 6 cm, c = 9 cm<br/>
+      ③ a = 5 cm, b = 8 cm, ∠C = 60°<br/>
+      ④ ∠A = 40°, ∠B = 70°, c = 6 cm
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">28. [합동 조건 판별하기]</div>
+      아래 그림의 두 삼각형 △ABC와 △DEF가 서로 합동일 때, 합동 조건의 이름을 쓰시오.
+      <div class="problem-img">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180" width="100%" height="160">
+  <!-- Triangle 1: ABC -->
+  <g transform="translate(20, 10)">
+    <polygon points="30,120 150,120 80,40" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+    <text x="75" y="30" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
+    <text x="15" y="125" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
+    <text x="158" y="125" font-family="sans-serif" font-size="12" font-weight="bold">C</text>
+    <!-- Dimensions -->
+    <text x="90" y="138" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">8 cm</text>
+    <text x="42" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">6 cm</text>
+    <!-- Angle at B -->
+    <path d="M 50 120 A 20 20 0 0 0 42 107" fill="none" stroke="#1A73E8" stroke-width="2"/>
+    <text x="55" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">50°</text>
+  </g>
+
+  <!-- Triangle 2: DEF (Rotated) -->
+  <g transform="translate(240, 10)">
+    <polygon points="30,120 150,120 100,40" fill="rgba(217,56,30,0.1)" stroke="#D9381E" stroke-width="2"/>
+    <text x="95" y="30" font-family="sans-serif" font-size="12" font-weight="bold">D</text>
+    <text x="15" y="125" font-family="sans-serif" font-size="12" font-weight="bold">E</text>
+    <text x="158" y="125" font-family="sans-serif" font-size="12" font-weight="bold">F</text>
+    <!-- Dimensions -->
+    <text x="90" y="138" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">8 cm</text>
+    <text x="135" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">6 cm</text>
+    <!-- Angle at F -->
+    <path d="M 130 120 A 20 20 0 0 1 138 107" fill="none" stroke="#D9381E" stroke-width="2"/>
+    <text x="120" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">50°</text>
+  </g>
+</svg>
+</div>
+      </div>
+      <div class="answer-line">답: ________ 합동</div>
+    </div>
+  </div>
+
+  <!-- 04 심화 29번: 정사각형 내부 회전 합동 -->
+  <div class="step-badge-adv">STEP 3. 04 심화 도전 (정사각형 내부 회전 합동 최고난도)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">29. [정사각형 내부의 합동과 선분의 길이]</div>
+    아래 그림과 같이 한 변의 길이가 12 cm인 정사각형 ABCD에서 점 E는 변 CD 위의 점이고, DE = 5 cm, EC = 7 cm이다. 점 F는 변 AD 위의 점으로 AF = 5 cm, FD = 7 cm이다. 두 선분 BE와 CF의 교점을 P라 할 때:<br/>
+    (1) 두 삼각형 △BCE와 △CDF가 서로 합동임을 설명하는 <b>합동 조건</b>을 쓰시오.<br/>
+    (2) 두 선분 BE와 CF가 이루는 각 <b>∠BPC의 크기</b>를 구하시오.
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" width="100%" height="210">
+  <!-- Square ABCD: A(60,40), B(60,200), C(220,200), D(220,40) -->
+  <rect x="60" y="40" width="160" height="160" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="45" y="40" font-family="sans-serif" font-size="13" font-weight="bold">A</text>
+  <text x="45" y="205" font-family="sans-serif" font-size="13" font-weight="bold">B</text>
+  <text x="228" y="205" font-family="sans-serif" font-size="13" font-weight="bold">C</text>
+  <text x="228" y="40" font-family="sans-serif" font-size="13" font-weight="bold">D</text>
+
+  <!-- Point E on CD: (220, 140) => CE = 6cm, DE = 10cm (Total side = 16cm) -->
+  <circle cx="220" cy="140" r="4" fill="#1A73E8"/>
+  <text x="230" y="145" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">E</text>
+
+  <!-- Triangle ABE (Blue): A(60,40), B(60,200), E(220,140) -> wait, standard is CBE and DAF -->
+  <!-- Let's do standard right triangles: △BCE and △CDF where E on CD and F on AD -->
+  <!-- E on CD at (220, 150), F on AD at (170, 40) -->
+  <!-- Triangle BCE: B(60,200), C(220,200), E(220,90) -> Right triangle at C -->
+  <polygon points="60,200 220,200 220,90" fill="rgba(26,115,232,0.15)" stroke="#1A73E8" stroke-width="2"/>
+  
+  <!-- Triangle CDF: C(220,200), D(220,40), F(110,40) -> Right triangle at D -->
+  <polygon points="220,200 220,40 110,40" fill="rgba(217,56,30,0.15)" stroke="#D9381E" stroke-width="2"/>
+  <circle cx="110" cy="40" r="4" fill="#D9381E"/>
+  <text x="105" y="30" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">F</text>
+  <circle cx="220" cy="90" r="4" fill="#1A73E8"/>
+  <text x="230" y="95" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">E</text>
+
+  <!-- Intersection P: (150, 130) -->
+  <!-- Line BE: (60,200) to (220,90) and CF: (220,200) to (110,40) -->
+  <!-- Intersection P at (168, 126) -->
+  <circle cx="168" cy="126" r="4" fill="#333"/>
+  <text x="155" y="120" font-family="sans-serif" font-size="12" font-weight="bold">P</text>
+
+  <!-- Dimension badges -->
+  <rect x="245" y="60" width="60" height="22" rx="4" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="275" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">DE = 5 cm</text>
+
+  <rect x="245" y="140" width="60" height="22" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="275" y="155" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">EC = 7 cm</text>
+
+  <text x="210" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">정사각형 ABCD에서 △BCE ≡ △CDF (SAS 합동)</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1; font-size: 12.5px;">
+        💡 <b>핵심 힌트:</b><br/>
+        • BC = CD = 12 cm (정사각형의 변)<br/>
+        • CE = DF = 7 cm<br/>
+        • ∠BCE = ∠CDF = 90°<br/>
+        • 두 직각삼각형이 합동이므로 대응각의 합을 이용해 ∠BPC 계산!
+        <div class="answer-line" style="margin-top: 20px;">답: (1) ________ 합동 &nbsp;|&nbsp; (2) ________ °</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 6 / Ⅰ. 기본 도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 7: 정답 및 해설집 (맨 뒷페이지 분리)
+     ========================================== -->
+<div class="page">
+  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] Ⅰ. 기본 도형 (01~04단원 완결본)</div>
+  <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">과외 선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
+
+  <!-- 01단원 -->
+  <div class="ans-sub-title">01. 점, 선, 면, 각 (1~13번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>01~04</th>
+      <td><b>01:</b> 10개 &nbsp;|&nbsp; <b>02:</b> 15개 &nbsp;|&nbsp; <b>03:</b> 7개 &nbsp;|&nbsp; <b>04:</b> 2개</td>
+    </tr>
+    <tr>
+      <th>05~08</th>
+      <td><b>05:</b> ○ &nbsp;|&nbsp; <b>06:</b> ○ &nbsp;|&nbsp; <b>07:</b> ✕ &nbsp;|&nbsp; <b>08:</b> ○</td>
+    </tr>
+    <tr>
+      <th>09~11</th>
+      <td>
+        <b>09:</b> AN = 18 cm (AM=12, MN=6 ➔ AN = 12+6 = 18)<br/>
+        <b>10:</b> x = 30 ((2x-15) + (x+15) = 90 ➔ 3x = 90 ➔ x = 30)<br/>
+        <b>11:</b> (1) 6 cm &nbsp;|&nbsp; (2) 8 cm
+      </td>
+    </tr>
+    <tr>
+      <th>12~13 (심화)</th>
+      <td>
+        <b>12:</b> <b>130°</b> (분침 240° - 시침 110° = 130°)<br/>
+        <b>13:</b> <b>BC = 12 cm</b> (AB = BC = CD = k ➔ 3k = 36 ➔ k = 12 cm)
+      </td>
+    </tr>
+  </table>
+
+  <!-- 02단원 -->
+  <div class="ans-sub-title">02. 위치 관계 (14~23번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>14~18 (직육면체)</th>
+      <td>
+        <b>14:</b> 4개 (AD, BC, AE, BF) &nbsp;|&nbsp; <b>15:</b> 3개 (CD, EF, GH)<br/>
+        <b>16:</b> 4개 (CG, DH, FG, EH) &nbsp;|&nbsp; <b>17:</b> 면 EFGH &nbsp;|&nbsp; <b>18:</b> 4개 (옆면 4개)
+      </td>
+    </tr>
+    <tr>
+      <th>19~21 (삼각기둥)</th>
+      <td>
+        <b>19:</b> 모서리 AD, 모서리 DE, 모서리 DF (3개)<br/>
+        <b>20:</b> 3개 (윗면 AB, BC, CA) &nbsp;|&nbsp; <b>21:</b> 2개 (면 ABED, 면 ACFD)
+      </td>
+    </tr>
+    <tr>
+      <th>22~23 (심화)</th>
+      <td>
+        <b>22:</b> <b>③번</b> (한 직선에 수직인 두 평면은 서로 평행)<br/>
+        <b>23:</b> <b>1개</b> (모서리 CD)
+      </td>
+    </tr>
+  </table>
+
+  <!-- 03단원 -->
+  <div class="ans-sub-title">03. 평행선의 성질 (24~26번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>24</th>
+      <td><b>∠x = 65° , ∠y = 115°</b> (엇각 ∠x = 65°, 보각 ∠y = 180° - 65° = 115°)</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td><b>∠x = 80°</b> (보조선 긋기: 위 엇각 35° + 아래 엇각 45° = 80°)</td>
+    </tr>
+    <tr>
+      <th>26 (심화)</th>
+      <td><b>∠x = 70°</b> (접은 각 = 55°, 엇각 = 55° ➔ 평각에서 ∠x = 180° - (55°×2) = 70°)</td>
+    </tr>
+  </table>
+
+  <!-- 04단원 -->
+  <div class="ans-sub-title">04. 작도와 합동 (27~29번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>27</th>
+      <td><b>②번</b> (삼각형 형성 조건: 가장 긴 변 &lt; 나머지 두 변의 합. 9 &lt; 3 + 6 = 9 이므로 삼각형이 만들어지지 않음)</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td><b>SAS 합동</b> (두 변 BC = EF = 8 cm, AB = DF = 6 cm 이고 그 끼인각 ∠B = ∠F = 50° 이므로 △ABC ≡ △DFE)</td>
+    </tr>
+    <tr>
+      <th>29 (심화)</th>
+      <td>
+        <b>(1) SAS 합동</b> (BC = CD = 12 cm, CE = DF = 7 cm, ∠BCE = ∠CDF = 90°)<br/>
+        <b>(2) 90°</b><br/>
+        <b>[친절 풀이]:</b> △BCE ≡ △CDF 이므로 ∠CBE = ∠DCF = ●, ∠CEB = ∠DFC = ✕ 라 하면,<br/>
+        직각삼각형 △BCE에서 ● + ✕ = 90° 입니다.<br/>
+        이제 교점 P가 있는 △PBC 에서: ∠PBC = ●, ∠PCB = 90° - ∠DCF = 90° - ● = ✕ 입니다.<br/>
+        따라서 △PBC 의 두 내각의 합 ∠PBC + ∠PCB = ● + ✕ = 90° 이므로,<br/>
+        나머지 한 각 <b>∠BPC = 180° - 90° = 90°</b> (두 선분은 서로 수직으로 만납니다!)
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-footer">Page 7 (정답 및 해설집) / Ⅰ. 기본 도형</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아진이의 중1-2 수학 비주얼 워크북</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body { background-color: #f1f5f9; color: #1e293b; line-height: 1.6; padding: 30px 20px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    
+    header { text-align: center; margin-bottom: 40px; }
+    .badge { display: inline-block; background: #e0e7ff; color: #4338ca; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px; }
+    header h1 { font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+    header p { font-size: 15px; color: #64748b; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    
+    .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: all 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+    
+    .card-tag { font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+    .tag-0 { color: #2563eb; }
+    .tag-1 { color: #059669; }
+    .tag-2 { color: #d97706; }
+    .tag-3 { color: #dc2626; }
+    .tag-4 { color: #7c3aed; }
+    
+    .card h2 { font-size: 18px; font-weight: 700; color: #1e293b; margin-bottom: 10px; }
+    .card ul { list-style: none; margin-bottom: 20px; font-size: 13.5px; color: #475569; display: flex; flex-direction: column; gap: 6px; }
+    .card ul li::before { content: "•"; color: #94a3b8; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+    
+    .card-btn { display: block; text-align: center; background: #1e293b; color: white; text-decoration: none; padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+    .card-btn:hover { background: #0f172a; }
+    .card-btn.primary { background: #2563eb; }
+    .card-btn.primary:hover { background: #1d4ed8; }
+
+    footer { text-align: center; margin-top: 50px; font-size: 13px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">맞춤형 과외 교재 포털</div>
+    <h1>📚 아진이의 중1-2 수학 비주얼 워크북</h1>
+    <p>개념 1분 정리 ➔ 기초 드릴 ➔ 대표 유형 ➔ 내신 1등급 심화 ➔ 빠른 정답 분리</p>
+  </header>
+
+  <div class="grid">
+    <!-- 0단원 -->
+    <div class="card">
+      <div>
+        <div class="card-tag tag-0">0단원 • 브릿지 연계</div>
+        <h2>좌표평면과 그래프</h2>
+        <ul>
+          <li>00-1. 순서쌍과 좌표, 사분면, 대칭점</li>
+          <li>00-2. 그래프와 그 해석 (수면높이, 이동거리)</li>
+          <li>00-3. 정비례와 반비례 (그래프 성질 & 식)</li>
+          <li><b>[심화]</b> 형과 동생의 추월 그래프, 직사각형 넓이</li>
+        </ul>
+      </div>
+      <a href="workbooks/unit_00_coordinates_and_graphs.html" class="card-btn primary" target="_blank">워크북 열기 (5P) ➔</a>
+    </div>
+
+    <!-- 1단원 -->
+    <div class="card">
+      <div>
+        <div class="card-tag tag-1">1단원 • Ⅰ. 기본 도형</div>
+        <h2>기본 도형 완결본</h2>
+        <ul>
+          <li>01. 점, 선, 면, 각 & 시계 각도 계산</li>
+          <li>02. 위치 관계 (꼬인 위치, 직육면체·삼각기둥)</li>
+          <li>03. 평행선의 성질 (동위각, 엇각, 꺾인선, 종이접기)</li>
+          <li>04. 작도와 합동 (SSS, SAS, ASA, 회전합동)</li>
+        </ul>
+      </div>
+      <a href="workbooks/unit_01_basic_figures.html" class="card-btn primary" target="_blank">워크북 열기 (7P) ➔</a>
+    </div>
+
+    <!-- 2단원 -->
+    <div class="card">
+      <div>
+        <div class="card-tag tag-2">2단원 • Ⅱ. 평면도형</div>
+        <h2>평면도형 완결본</h2>
+        <ul>
+          <li>05. 다각형의 성질 (대각선 공식, 내각/외각)</li>
+          <li>06. 원과 부채꼴 (호의 길이, 넓이, S=1/2lr)</li>
+          <li><b>[심화]</b> 별 모양 5각형 각의 합 (180°)</li>
+          <li><b>[심화]</b> 나뭇잎 모양 색칠한 넓이, 원 3개 묶은 끈</li>
+        </ul>
+      </div>
+      <a href="workbooks/unit_02_plane_figures.html" class="card-btn primary" target="_blank">워크북 열기 (6P) ➔</a>
+    </div>
+
+    <!-- 3단원 -->
+    <div class="card">
+      <div>
+        <div class="card-tag tag-3">3단원 • Ⅲ. 입체도형</div>
+        <h2>입체도형 완결본</h2>
+        <ul>
+          <li>07. 다면체와 회전체 (정다면체 5종, 회전체 단면)</li>
+          <li>08. 입체도형의 겉넓이와 부피 (기둥, 뿔, 구)</li>
+          <li><b>[심화]</b> 아르키메데스 부피 비 (3 : 2 : 1)</li>
+          <li><b>[심화]</b> 원뿔대 부피·겉넓이, 사다리꼴 회전체</li>
+        </ul>
+      </div>
+      <a href="workbooks/unit_03_3d_solids.html" class="card-btn primary" target="_blank">워크북 열기 (6P) ➔</a>
+    </div>
+
+    <!-- 4단원 -->
+    <div class="card">
+      <div>
+        <div class="card-tag tag-4">4단원 • Ⅳ. 통계</div>
+        <h2>통계 완결본</h2>
+        <ul>
+          <li>09. 자료의 정리와 그래프 (줄기와 잎, 히스토그램)</li>
+          <li>10. 상대도수와 통계적 추론 (찢어진 표 역산)</li>
+          <li><b>[심화]</b> 두 집단의 상대도수 분포 비교</li>
+          <li><b>[심화]</b> 전학생 추가 후 평균 변화 역산</li>
+        </ul>
+      </div>
+      <a href="workbooks/unit_04_statistics.html" class="card-btn primary" target="_blank">워크북 열기 (5P) ➔</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 아진이 중1-2 수학 과외 프로젝트 • Designed with Visual SVG & Clean Math
+  </footer>
+</div>
+
+</body>
+</html>

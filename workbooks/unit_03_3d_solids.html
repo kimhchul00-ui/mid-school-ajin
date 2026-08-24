@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>[중1 수학] Ⅲ. 입체도형 통합 워크북 (07. 다면체·회전체 & 08. 겉넓이·부피)</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f4f6f8; color: #212529; padding: 20px; line-height: 1.6; }
+    
+    .page { 
+      max-width: 840px; 
+      margin: 0 auto 30px auto; 
+      background: white; 
+      padding: 36px 45px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+      position: relative;
+    }
+    
+    .cover-header { 
+      border-bottom: 3px solid #1a73e8; 
+      padding-bottom: 12px; 
+      margin-bottom: 18px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+    .cover-header h1 { margin: 0; font-size: 24px; color: #1a73e8; }
+    .cover-header .sub { font-size: 13px; color: #e37400; font-weight: bold; }
+    .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
+    
+    .section-banner {
+      background: linear-gradient(90deg, #1a73e8, #3b82f6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-weight: bold;
+      margin: 18px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .concept-card { 
+      background: #f8faff; 
+      border: 1px solid #d0e1fd; 
+      border-left: 5px solid #1a73e8; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      margin-bottom: 14px; 
+    }
+    .concept-card h3 { margin: 0 0 6px 0; font-size: 14px; color: #1a73e8; }
+    
+    .step-badge { 
+      display: inline-block; 
+      background: #e9ecef; 
+      color: #343a40; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #495057; 
+      margin: 10px 0 8px 0; 
+    }
+    
+    .step-badge-adv {
+      display: inline-block; 
+      background: #fee2e2; 
+      color: #991b1b; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #dc2626; 
+      margin: 12px 0 8px 0; 
+    }
+    
+    .problem-box { 
+      background: #ffffff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 8px; 
+      padding: 12px 15px; 
+      margin-bottom: 10px; 
+    }
+    .problem-title { font-weight: bold; font-size: 13.5px; color: #1e293b; margin-bottom: 5px; }
+    .problem-img { text-align: center; margin: 6px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    
+    .answer-line { 
+      min-height: 26px; 
+      border-bottom: 1px dashed #cbd5e1; 
+      margin-top: 6px; 
+      display: flex; 
+      align-items: flex-end; 
+      justify-content: flex-end; 
+      color: #94a3b8; 
+      font-size: 12px; 
+      padding-bottom: 2px; 
+    }
+    
+    .page-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 20px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+
+    /* 해설지 스타일 */
+    .ans-sheet-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0f766e;
+      border-bottom: 3px solid #0f766e;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-sub-title {
+      font-size: 14.5px;
+      font-weight: bold;
+      color: #1e293b;
+      background: #f0fdf4;
+      padding: 4px 10px;
+      border-left: 4px solid #16a34a;
+      margin: 12px 0 8px 0;
+      border-radius: 4px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .ans-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      width: 16%;
+      text-align: center;
+    }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: 07. 다면체와 회전체 (정다면체 비교 & 기초 드릴)
+     ========================================== -->
+<div class="page">
+  <div class="cover-header">
+    <div>
+      <div class="sub">중1-2 수학 [Ⅲ. 입체도형] 통합 워크북</div>
+      <h1>Ⅲ. 입체도형 (07. 다면체·회전체 &amp; 08. 겉넓이·부피)</h1>
+    </div>
+    <div class="meta">이름: ______________ | 날짜: ____.____.____</div>
+  </div>
+
+  <div class="section-banner">
+    <span>07. 다면체와 회전체</span>
+    <span style="font-size: 12.5px; font-weight: normal;">정다면체 5가지 &amp; 다면체 분류</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: 정다면체 5가지 비교표 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 세상에 5가지뿐인 정다면체 완벽 정리</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="180">
+  <rect x="5" y="5" width="590" height="190" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  
+  <!-- Table Header -->
+  <rect x="15" y="15" width="570" height="30" rx="4" fill="#1A73E8"/>
+  <text x="75" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">정다면체</text>
+  <text x="180" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">면의 모양</text>
+  <text x="290" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">꼭짓점 모이는 면</text>
+  <text x="395" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">꼭짓점(V)</text>
+  <text x="485" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">모서리(E)</text>
+  <text x="555" y="35" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFF">면(F)</text>
+
+  <!-- Row 1: 정사면체 -->
+  <text x="75" y="68" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">정사면체</text>
+  <text x="180" y="68" text-anchor="middle" font-family="sans-serif" font-size="12">정삼각형</text>
+  <text x="290" y="68" text-anchor="middle" font-family="sans-serif" font-size="12">3개</text>
+  <text x="395" y="68" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">4</text>
+  <text x="485" y="68" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">6</text>
+  <text x="555" y="68" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">4</text>
+  <line x1="15" y1="78" x2="585" y2="78" stroke="#E2E8F0"/>
+
+  <!-- Row 2: 정육면체 -->
+  <text x="75" y="98" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">정육면체</text>
+  <text x="180" y="98" text-anchor="middle" font-family="sans-serif" font-size="12">정사각형</text>
+  <text x="290" y="98" text-anchor="middle" font-family="sans-serif" font-size="12">3개</text>
+  <text x="395" y="98" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">8</text>
+  <text x="485" y="98" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">12</text>
+  <text x="555" y="98" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">6</text>
+  <line x1="15" y1="108" x2="585" y2="108" stroke="#E2E8F0"/>
+
+  <!-- Row 3: 정팔면체 -->
+  <text x="75" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">정팔면체</text>
+  <text x="180" y="128" text-anchor="middle" font-family="sans-serif" font-size="12">정삼각형</text>
+  <text x="290" y="128" text-anchor="middle" font-family="sans-serif" font-size="12">4개</text>
+  <text x="395" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">6</text>
+  <text x="485" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">12</text>
+  <text x="555" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">8</text>
+  <line x1="15" y1="138" x2="585" y2="138" stroke="#E2E8F0"/>
+
+  <!-- Row 4: 정십이면체 -->
+  <text x="75" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">정십이면체</text>
+  <text x="180" y="158" text-anchor="middle" font-family="sans-serif" font-size="12">정오각형</text>
+  <text x="290" y="158" text-anchor="middle" font-family="sans-serif" font-size="12">3개</text>
+  <text x="395" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">20</text>
+  <text x="485" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">30</text>
+  <text x="555" y="158" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">12</text>
+  <line x1="15" y1="168" x2="585" y2="168" stroke="#E2E8F0"/>
+
+  <!-- Row 5: 정이십면체 -->
+  <text x="75" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">정이십면체</text>
+  <text x="180" y="188" text-anchor="middle" font-family="sans-serif" font-size="12">정삼각형</text>
+  <text x="290" y="188" text-anchor="middle" font-family="sans-serif" font-size="12">5개</text>
+  <text x="395" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">12</text>
+  <text x="485" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">30</text>
+  <text x="555" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">20</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 다면체 드릴 (8제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[01~04] 다면체 구성 요소 구하기</div>
+      <b>01.</b> 칠각뿔의 면의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>02.</b> 칠각뿔의 모서리의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>03.</b> 팔각기둥의 꼭짓점의 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>04.</b> 옆면의 모양이 사다리꼴인 다면체: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )대
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[05~08] 정다면체 특징 퀴즈</div>
+      <b>05.</b> 면의 모양이 정오각형인 유일한 정다면체: 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )면체<br/>
+      <b>06.</b> 한 꼭짓점에 모이는 면이 4개인 정다면체: 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )면체<br/>
+      <b>07.</b> 꼭짓점의 개수가 20개인 정다면체: 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )면체<br/>
+      <b>08.</b> 모서리의 개수가 12개인 두 정다면체: 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )면체, 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )면체
+    </div>
+  </div>
+
+  <div class="page-footer">Page 1 / Ⅲ. 입체도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 2: 07. 다면체와 회전체 (회전체 단면 & 오일러 공식)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>07. 다면체와 회전체</span>
+    <span style="font-size: 12.5px; font-weight: normal;">회전체의 성질 &amp; 단면의 모양</span>
+  </div>
+
+  <!-- 비주얼 개념: 회전체 단면 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 회전축을 포함하는 평면으로 자른 단면</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <!-- 1. Cylinder -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="120" height="160" rx="6" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="60" y="22" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">원기둥</text>
+    <!-- Axis & Cylinder -->
+    <line x1="60" y1="35" x2="60" y2="130" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <rect x="35" y="50" width="50" height="65" fill="rgba(26,115,232,0.15)" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="60" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">단면: 직사각형</text>
+  </g>
+
+  <!-- 2. Cone -->
+  <g transform="translate(145, 10)">
+    <rect x="0" y="0" width="120" height="160" rx="6" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="60" y="22" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">원뿔</text>
+    <line x1="60" y1="35" x2="60" y2="130" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <polygon points="60,50 35,115 85,115" fill="rgba(217,56,30,0.15)" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="60" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">단면: 이등변삼각형</text>
+  </g>
+
+  <!-- 3. Frustum -->
+  <g transform="translate(280, 10)">
+    <rect x="0" y="0" width="120" height="160" rx="6" fill="#F4FFF4" stroke="#CCE2CE"/>
+    <text x="60" y="22" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">원뿔대</text>
+    <line x1="60" y1="35" x2="60" y2="130" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <polygon points="45,50 75,50 90,115 30,115" fill="rgba(24,128,56,0.15)" stroke="#188038" stroke-width="1.5"/>
+    <text x="60" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">단면: 등변사다리꼴</text>
+  </g>
+
+  <!-- 4. Sphere -->
+  <g transform="translate(415, 10)">
+    <rect x="0" y="0" width="115" height="160" rx="6" fill="#FFFDF0" stroke="#EFE5B8"/>
+    <text x="57" y="22" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E37400">구 (Sphere)</text>
+    <line x1="57" y1="35" x2="57" y2="130" stroke="#D9381E" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <circle cx="57" cy="82" r="32" fill="rgba(227,116,0,0.15)" stroke="#E37400" stroke-width="1.5"/>
+    <text x="57" y="148" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">단면: 원</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 2. 회전체 &amp; 다면체 유형 연습 (4제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">09. [회전체의 단면 판단]</div>
+      다음 중 회전축을 포함하는 평면으로 잘랐을 때의 단면의 모양이 <b>이등변삼각형</b>인 입체도형은?<br/>
+      ① 원기둥 &nbsp;&nbsp; ② 원뿔 &nbsp;&nbsp; ③ 원뿔대 &nbsp;&nbsp; ④ 구
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">10. [오일러의 다면체 공식]</div>
+      어떤 다면체의 꼭짓점의 개수가 14개, 모서리의 개수가 21개일 때, 이 다면체의 <b>면의 개수 F</b>를 구하시오.<br/>
+      (힌트: 꼭짓점 V - 모서리 E + 면 F = 2)
+      <div class="answer-line">답: F = ________ 개</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">11. [회전축에 수직인 단면]</div>
+      모든 회전체를 회전축에 <b>수직인 평면</b>으로 자를 때 생기는 단면의 공통적인 모양은 무엇인가?
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">12. [다면체 판별]</div>
+      밑면이 1개이고 옆면의 모양이 모두 삼각형이며, 총 면의 개수가 10개인 다면체의 이름을 쓰시오.
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 2 / Ⅲ. 입체도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 3: 08. 겉넓이와 부피 (기본 공식 & 아르키메데스)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>08. 입체도형의 겉넓이와 부피</span>
+    <span style="font-size: 12.5px; font-weight: normal;">기둥·뿔·구의 부피 비 &amp; 기본 공식</span>
+  </div>
+
+  <!-- 비주얼 개념: 아르키메데스 원리 -->
+  <div class="concept-card">
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <rect x="5" y="5" width="530" height="170" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="270" y="26" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">⚡ 아르키메데스의 부피비 (반지름 r, 높이 2r)</text>
+
+  <!-- 1. 원기둥 -->
+  <g transform="translate(30, 40)">
+    <rect x="20" y="15" width="80" height="80" fill="rgba(26,115,232,0.12)" stroke="#1A73E8" stroke-width="2"/>
+    <text x="60" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">원기둥</text>
+    <text x="60" y="60" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1A73E8">비율 3</text>
+  </g>
+
+  <!-- 2. 구 -->
+  <g transform="translate(195, 40)">
+    <circle cx="60" cy="55" r="40" fill="rgba(227,116,0,0.12)" stroke="#E37400" stroke-width="2"/>
+    <text x="60" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E37400">구</text>
+    <text x="60" y="60" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#E37400">비율 2</text>
+  </g>
+
+  <!-- 3. 원뿔 -->
+  <g transform="translate(360, 40)">
+    <polygon points="60,15 20,95 100,95" fill="rgba(217,56,30,0.12)" stroke="#D9381E" stroke-width="2"/>
+    <text x="60" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">원뿔</text>
+    <text x="60" y="70" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#D9381E">비율 1</text>
+  </g>
+
+  <text x="270" y="165" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">원기둥의 부피 : 구의 부피 : 원뿔의 부피 = 3 : 2 : 1</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 공식 계산 드릴 (6제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[13~15] 기둥의 겉넓이와 부피</div>
+      밑반지름 4 cm, 높이 10 cm인 원기둥에 대하여:<br/>
+      <b>13.</b> 밑넓이 (한 밑면): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) π cm²<br/>
+      <b>14.</b> 옆넓이 (2πr × h): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) π cm²<br/>
+      <b>15.</b> 원기둥의 부피 (밑넓이 × h): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) π cm³
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[16~18] 뿔과 구의 부피 공식</div>
+      <b>16.</b> 밑면이 한 변 6 cm 정사각형이고 높이가 10 cm인 사각뿔의 부피: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cm³<br/>
+      <b>17.</b> 반지름이 3 cm인 구의 겉넓이 (4πr²): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) π cm²<br/>
+      <b>18.</b> 반지름이 3 cm인 구의 부피 (4/3 πr³): ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) π cm³
+    </div>
+  </div>
+
+  <div class="page-footer">Page 3 / Ⅲ. 입체도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 4: 08. 겉넓이와 부피 (유형 집중 연습)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>08. 입체도형의 겉넓이와 부피</span>
+    <span style="font-size: 12.5px; font-weight: normal;">원뿔 전개도 &amp; 반구의 겉넓이</span>
+  </div>
+
+  <div class="step-badge">STEP 2. 핵심 유형 연습 (4제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">19. [원뿔의 겉넓이 구하기]</div>
+      밑반지름이 5 cm이고 모선의 길이가 13 cm인 원뿔의 <b>겉넓이</b>를 구하시오.<br/>
+      (힌트: 겉넓이 = 밑넓이 + 옆넓이 = πr² + πrl)
+      <div class="answer-line">답: ________ π cm²</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">20. [반구의 겉넓이 ★빈출주의]</div>
+      반지름이 6 cm인 반구의 <b>겉넓이</b>를 구하시오.<br/>
+      (주의: 둥근 곡면 넓이 + 잘린 원 모양 밑면 넓이!)
+      <div class="answer-line">답: ________ π cm²</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">21. [구와 원기둥의 부피 비교]</div>
+      반지름이 6 cm인 구를 녹여서 밑반지름이 4 cm인 원기둥을 만들려고 한다. 이 원기둥의 <b>높이 h</b>를 구하시오.
+      <div class="answer-line">답: h = ________ cm</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">22. [구멍 뚫린 입체도형의 부피]</div>
+      한 변이 8 cm인 정육면체의 중심에 밑반지름 2 cm인 원기둥 모양의 구멍을 관통하여 뚫었을 때, 남은 입체도형의 <b>부피</b>를 구하시오.
+      <div class="answer-line">답: ( ________ - ________ π ) cm³</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 4 / Ⅲ. 입체도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 5: 08. 겉넓이와 부피 (심화 도전 - 원뿔대 & 사다리꼴 회전체)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>08. 입체도형의 겉넓이와 부피</span>
+    <span style="font-size: 12.5px; font-weight: normal;">입체도형 최고난도 심화 2제</span>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 08 심화 도전 (내신 1등급 필수 최고난도)</div>
+
+  <!-- 심화 23: 원뿔대의 부피와 겉넓이 -->
+  <div class="problem-box">
+    <div class="problem-title">23. [원뿔대의 부피와 겉넓이 구하기]</div>
+    아래 그림과 같이 윗면 반지름 3 cm, 밑면 반지름 6 cm, 높이 4 cm, 모선 5 cm인 원뿔대에 대하여:<br/>
+    (1) 원뿔대의 <b>부피</b>를 구하시오. (원래 큰 원뿔 부피 - 잘려나간 작은 원뿔 부피)<br/>
+    (2) 원뿔대의 <b>겉넓이</b>를 구하시오. (윗밑넓이 + 아랫밑넓이 + 옆넓이)
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="100%" height="200">
+  <!-- Cone Frustum -->
+  <!-- Top: r=3cm, Bottom: R=6cm, Height=4cm, Slant=5cm -->
+  <!-- Top ellipse at y=60, rx=40, ry=10 -->
+  <!-- Bottom ellipse at y=170, rx=80, ry=20 -->
+  
+  <!-- Dashed extended cone top: (190, 10) -->
+  <line x1="190" y1="10" x2="150" y2="60" stroke="#AAA" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="190" y1="10" x2="230" y2="60" stroke="#AAA" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="190" y1="10" x2="190" y2="60" stroke="#AAA" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Frustum body -->
+  <polygon points="150,60 230,60 270,170 110,170" fill="rgba(26,115,232,0.12)" stroke="#1A73E8" stroke-width="2"/>
+  
+  <!-- Top base -->
+  <ellipse cx="190" cy="60" rx="40" ry="10" fill="rgba(26,115,232,0.2)" stroke="#1A73E8" stroke-width="2"/>
+  <!-- Bottom base front -->
+  <path d="M 110 170 A 80 20 0 0 0 270 170" fill="none" stroke="#1A73E8" stroke-width="2"/>
+
+  <!-- Height line -->
+  <line x1="190" y1="60" x2="190" y2="170" stroke="#D9381E" stroke-width="2"/>
+  <circle cx="190" cy="60" r="3" fill="#D9381E"/>
+  <circle cx="190" cy="170" r="3" fill="#D9381E"/>
+
+  <!-- Dimension badges -->
+  <rect x="155" y="32" width="70" height="20" rx="4" fill="#FFF" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="190" y="46" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">윗반지름 3 cm</text>
+
+  <rect x="150" y="180" width="80" height="20" rx="4" fill="#FFF" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="190" y="194" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">밑반지름 6 cm</text>
+
+  <rect x="200" y="105" width="60" height="20" rx="4" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="230" y="119" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">높이 4 cm</text>
+
+  <rect x="280" y="105" width="70" height="20" rx="4" fill="#FFFDF0" stroke="#E37400" stroke-width="1.5"/>
+  <text x="315" y="119" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E37400">모선 5 cm</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1.1; font-size: 12.5px;">
+        💡 <b>핵심 풀이법:</b><br/>
+        • 원래 큰 원뿔: 밑반지름 6, 높이 8 cm<br/>
+        • 잘린 작은 원뿔: 밑반지름 3, 높이 4 cm<br/>
+        • 옆넓이 = 큰 부채꼴(모선 10) - 작은 부채꼴(모선 5)
+        <div class="answer-line" style="margin-top: 15px;">답: (1) 부피 = ________ π cm³</div>
+        <div class="answer-line" style="margin-top: 8px;">답: (2) 겉넓이 = ________ π cm²</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 심화 24: 사다리꼴 회전체 부피 -->
+  <div class="problem-box">
+    <div class="problem-title">24. [사다리꼴 1회전체의 부피 구하기]</div>
+    아래 그림과 같이 윗변 3 cm, 아랫변 6 cm, 높이 6 cm인 사다리꼴 ABCD를 직선 l을 회전축으로 하여 1회전 시켰을 때 생기는 회전체의 <b>부피</b>를 구하시오.
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="100%" height="200">
+  <!-- Rotation Axis l -->
+  <line x1="100" y1="20" x2="100" y2="210" stroke="#D9381E" stroke-width="2.5"/>
+  <text x="100" y="15" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">회전축 l</text>
+
+  <!-- Right Trapezoid ABCD: A(100,50), D(100,170), C(220,170), B(160,50) -->
+  <!-- Top width AB = 3cm, Bottom width DC = 6cm, Height AD = 6cm -->
+  <polygon points="100,50 160,50 220,170 100,170" fill="rgba(24,128,56,0.18)" stroke="#188038" stroke-width="2.5"/>
+  <circle cx="100" cy="50" r="3" fill="#333"/>
+  <circle cx="160" cy="50" r="3" fill="#333"/>
+  <circle cx="220" cy="170" r="3" fill="#333"/>
+  <circle cx="100" cy="170" r="3" fill="#333"/>
+
+  <text x="85" y="55" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
+  <text x="165" y="45" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
+  <text x="228" y="175" font-family="sans-serif" font-size="12" font-weight="bold">C</text>
+  <text x="85" y="175" font-family="sans-serif" font-size="12" font-weight="bold">D</text>
+
+  <!-- Rotation symbol -->
+  <path d="M 85 105 A 15 15 0 1 1 115 105" fill="none" stroke="#D9381E" stroke-width="2"/>
+  <text x="75" y="110" font-family="sans-serif" font-size="14" font-weight="bold" fill="#D9381E">1회전</text>
+
+  <!-- Dimensions -->
+  <rect x="110" y="25" width="46" height="20" rx="3" fill="#FFF" stroke="#188038" stroke-width="1.5"/>
+  <text x="133" y="39" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#188038">3 cm</text>
+
+  <rect x="140" y="180" width="46" height="20" rx="3" fill="#FFF" stroke="#188038" stroke-width="1.5"/>
+  <text x="163" y="194" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#188038">6 cm</text>
+
+  <rect x="35" y="100" width="46" height="20" rx="3" fill="#FFF" stroke="#333" stroke-width="1.5"/>
+  <text x="58" y="114" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold">6 cm</text>
+
+  <text x="240" y="115" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">회전체:</text>
+  <text x="240" y="135" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">원뿔대 모양</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1.1; font-size: 12.5px;">
+        💡 <b>핵심 풀이법:</b><br/>
+        • 회전체는 <b>원기둥(반지름 3, 높이 6) + 원뿔(밑반지름 3, 높이 6)</b>의 합체 모양!<br/>
+        • 원기둥 부피: π × 3² × 6 = 54π<br/>
+        • 원뿔 부피: 1/3 × π × 3² × 6 = 18π
+        <div class="answer-line" style="margin-top: 25px;">답: 부피 = ________ π cm³</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 5 / Ⅲ. 입체도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 6: 정답 및 해설집 (맨 뒷페이지 분리)
+     ========================================== -->
+<div class="page">
+  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] Ⅲ. 입체도형 (07~08단원 완결본)</div>
+  <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">과외 선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
+
+  <!-- 07단원 해설 -->
+  <div class="ans-sub-title">07. 다면체와 회전체 (1~12번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>01~04</th>
+      <td>
+        <b>01:</b> 8개 (7 + 1 = 8)<br/>
+        <b>02:</b> 14개 (7 × 2 = 14)<br/>
+        <b>03:</b> 16개 (8 × 2 = 16)<br/>
+        <b>04:</b> 각뿔대
+      </td>
+    </tr>
+    <tr>
+      <th>05~08</th>
+      <td>
+        <b>05:</b> 정십이면체<br/>
+        <b>06:</b> 정팔면체<br/>
+        <b>07:</b> 정십이면체 (꼭짓점 20개)<br/>
+        <b>08:</b> 정육면체, 정팔면체 (둘 다 모서리 12개)
+      </td>
+    </tr>
+    <tr>
+      <th>09~12</th>
+      <td>
+        <b>09:</b> ②번 (원뿔)<br/>
+        <b>10:</b> <b>F = 9개</b> (V - E + F = 2 ➔ 14 - 21 + F = 2 ➔ F = 9)<br/>
+        <b>11:</b> 원<br/>
+        <b>12:</b> 구각뿔 (밑면 1개 + 옆면 9개 = 10개)
+      </td>
+    </tr>
+  </table>
+
+  <!-- 08단원 해설 -->
+  <div class="ans-sub-title">08. 입체도형의 겉넓이와 부피 (13~24번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>13~15</th>
+      <td>
+        <b>13:</b> 16π cm² (π × 4² = 16π)<br/>
+        <b>14:</b> 80π cm² (2π × 4 × 10 = 80π)<br/>
+        <b>15:</b> 160π cm³ (16π × 10 = 160π)
+      </td>
+    </tr>
+    <tr>
+      <th>16~18</th>
+      <td>
+        <b>16:</b> 120 cm³ (1/3 × 36 × 10 = 120)<br/>
+        <b>17:</b> 36π cm² (4π × 3² = 36π)<br/>
+        <b>18:</b> 36π cm³ (4/3 π × 3³ = 36π)
+      </td>
+    </tr>
+    <tr>
+      <th>19~22</th>
+      <td>
+        <b>19:</b> <b>90π cm²</b> (밑넓이 25π + 옆넓이 π × 5 × 13 = 65π ➔ 합 = 90π)<br/>
+        <b>20:</b> <b>108π cm²</b> (반구 곡면 = 2π × 6² = 72π, 밑면 원넓이 = π × 6² = 36π ➔ 합 = 108π)<br/>
+        <b>21:</b> <b>h = 18 cm</b> (구 부피 = 4/3 π × 6³ = 288π. 원기둥 부피 = π × 4² × h = 16πh = 288π ➔ h = 18)<br/>
+        <b>22:</b> <b>512 - 32π cm³</b> (정육면체 부피 8³ = 512, 원기둥 부피 π × 2² × 8 = 32π ➔ 512 - 32π)
+      </td>
+    </tr>
+    <tr>
+      <th>23~24 (심화)</th>
+      <td>
+        <b>23-(1):</b> <b>84π cm³</b> (큰 원뿔 부피 = 1/3 π × 6² × 8 = 96π, 작은 원뿔 부피 = 1/3 π × 3² × 4 = 12π ➔ 96π - 12π = <b>84π cm³</b>)<br/>
+        <b>23-(2):</b> <b>90π cm²</b> (윗밑넓이 9π + 아랫밑넓이 36π + 옆넓이(큰부채꼴 60π - 작은부채꼴 15π = 45π) ➔ 9π + 36π + 45π = <b>90π cm²</b>)<br/><br/>
+        <b>24:</b> <b>126π cm³ (또는 원뿔대 1/3 × 6 × (36π + 9π + 18π) = 126π cm³)</b><br/>
+        <b>[친절 풀이]:</b> 큰 원뿔(밑반지름 6, 높이 12) 부피 = 1/3 × π × 6² × 12 = 144π.<br/>
+        위쪽 잘려나간 작은 원뿔(밑반지름 3, 높이 6) 부피 = 1/3 × π × 3² × 6 = 18π.<br/>
+        따라서 사다리꼴 회전체(원뿔대)의 부피 = 144π - 18π = <b>126π cm³</b>
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-footer">Page 6 (정답 및 해설집) / Ⅲ. 입체도형</div>
+</div>
+
+</body>
+</html>

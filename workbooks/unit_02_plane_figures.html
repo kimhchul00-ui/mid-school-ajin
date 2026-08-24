@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>[중1 수학] Ⅱ. 평면도형 통합 워크북 (05. 다각형 & 06. 원과 부채꼴)</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f4f6f8; color: #212529; padding: 20px; line-height: 1.6; }
+    
+    .page { 
+      max-width: 840px; 
+      margin: 0 auto 30px auto; 
+      background: white; 
+      padding: 36px 45px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+      position: relative;
+    }
+    
+    .cover-header { 
+      border-bottom: 3px solid #1a73e8; 
+      padding-bottom: 12px; 
+      margin-bottom: 18px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+    .cover-header h1 { margin: 0; font-size: 24px; color: #1a73e8; }
+    .cover-header .sub { font-size: 13px; color: #e37400; font-weight: bold; }
+    .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
+    
+    .section-banner {
+      background: linear-gradient(90deg, #1a73e8, #3b82f6);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-weight: bold;
+      margin: 18px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .concept-card { 
+      background: #f8faff; 
+      border: 1px solid #d0e1fd; 
+      border-left: 5px solid #1a73e8; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      margin-bottom: 14px; 
+    }
+    .concept-card h3 { margin: 0 0 6px 0; font-size: 14px; color: #1a73e8; }
+    
+    .step-badge { 
+      display: inline-block; 
+      background: #e9ecef; 
+      color: #343a40; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #495057; 
+      margin: 10px 0 8px 0; 
+    }
+    
+    .step-badge-adv {
+      display: inline-block; 
+      background: #fee2e2; 
+      color: #991b1b; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #dc2626; 
+      margin: 12px 0 8px 0; 
+    }
+    
+    .problem-box { 
+      background: #ffffff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 8px; 
+      padding: 12px 15px; 
+      margin-bottom: 10px; 
+    }
+    .problem-title { font-weight: bold; font-size: 13.5px; color: #1e293b; margin-bottom: 5px; }
+    .problem-img { text-align: center; margin: 6px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    
+    .answer-line { 
+      min-height: 26px; 
+      border-bottom: 1px dashed #cbd5e1; 
+      margin-top: 6px; 
+      display: flex; 
+      align-items: flex-end; 
+      justify-content: flex-end; 
+      color: #94a3b8; 
+      font-size: 12px; 
+      padding-bottom: 2px; 
+    }
+    
+    .page-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 20px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+
+    /* 해설지 스타일 */
+    .ans-sheet-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0f766e;
+      border-bottom: 3px solid #0f766e;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-sub-title {
+      font-size: 14.5px;
+      font-weight: bold;
+      color: #1e293b;
+      background: #f0fdf4;
+      padding: 4px 10px;
+      border-left: 4px solid #16a34a;
+      margin: 12px 0 8px 0;
+      border-radius: 4px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .ans-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      width: 16%;
+      text-align: center;
+    }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: 05. 다각형의 성질 (대각선 공식 & 기초 드릴)
+     ========================================== -->
+<div class="page">
+  <div class="cover-header">
+    <div>
+      <div class="sub">중1-2 수학 [Ⅱ. 평면도형] 통합 워크북</div>
+      <h1>Ⅱ. 평면도형 (05. 다각형 &amp; 06. 원과 부채꼴)</h1>
+    </div>
+    <div class="meta">이름: ______________ | 날짜: ____.____.____</div>
+  </div>
+
+  <div class="section-banner">
+    <span>05. 다각형의 성질</span>
+    <span style="font-size: 12.5px; font-weight: normal;">대각선의 개수 &amp; 내각의 합</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: 대각선 공식 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: n각형의 대각선 공식 유도</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="100%" height="160">
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="125" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">1. 한 꼭짓점에서의 대각선</text>
+    <!-- Pentagon -->
+    <polygon points="125,45 60,80 85,140 165,140 190,80" fill="rgba(26,115,232,0.08)" stroke="#1A73E8" stroke-width="2"/>
+    <!-- Diagonals from top vertex (125, 45) -->
+    <line x1="125" y1="45" x2="85" y2="140" stroke="#D9381E" stroke-width="2" stroke-dasharray="3,3"/>
+    <line x1="125" y1="45" x2="165" y2="140" stroke="#D9381E" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="125" cy="45" r="4" fill="#D9381E"/>
+    
+    <rect x="40" y="105" width="170" height="24" rx="4" fill="#FFF" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="125" y="121" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">한 꼭짓점: (n - 3) 개</text>
+  </g>
+
+  <g transform="translate(280, 10)">
+    <rect x="0" y="0" width="250" height="160" rx="8" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="125" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">2. n각형 대각선의 총 개수</text>
+    <!-- Formula Badge -->
+    <rect x="35" y="55" width="180" height="40" rx="6" fill="#FFF" stroke="#D9381E" stroke-width="2"/>
+    <text x="125" y="80" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#D9381E">N = n(n - 3) / 2</text>
+    
+    <text x="125" y="120" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#555">• 십각형 대각선 총 개수:</text>
+    <text x="125" y="140" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">10 × 7 ÷ 2 = 35 개</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 공식 드릴 (8제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[01~04] 대각선의 개수 구하기</div>
+      <b>01.</b> 칠각형의 한 꼭짓점에서 그을 수 있는 대각선의 수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>02.</b> 칠각형의 대각선의 총 개수: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) 개<br/>
+      <b>03.</b> 대각선의 총 개수가 20개인 다각형의 이름: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )각형<br/>
+      <b>04.</b> 대각선이 없는 유일한 다각형: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )각형
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[05~08] 내각과 외각의 성질</div>
+      <b>05.</b> 육각형의 내각의 크기의 총합: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )°<br/>
+      <b>06.</b> 모든 다각형의 외각의 크기의 총합은 항상: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )°<br/>
+      <b>07.</b> 정팔각형의 한 내각의 크기: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )°<br/>
+      <b>08.</b> 한 외각의 크기가 30°인 정다각형: 정( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )각형
+    </div>
+  </div>
+
+  <div class="page-footer">Page 1 / Ⅱ. 평면도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 2: 05. 다각형의 성질 (유형 & 외각 심화)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>05. 다각형의 성질</span>
+    <span style="font-size: 12.5px; font-weight: normal;">외각의 성질 &amp; 별 모양 심화</span>
+  </div>
+
+  <!-- 비주얼 개념: 외각 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 삼각형의 한 외각의 성질</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="100%" height="160">
+  <!-- Triangle ABC with extended base to D: A(140, 35), B(50, 130), C(250, 130), D(370, 130) -->
+  <polygon points="140,35 50,130 250,130" fill="rgba(26,115,232,0.08)" stroke="#1A73E8" stroke-width="2.5"/>
+  <line x1="250" y1="130" x2="370" y2="130" stroke="#333" stroke-width="2"/>
+  
+  <text x="140" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">A</text>
+  <text x="35" y="135" font-family="sans-serif" font-size="13" font-weight="bold">B</text>
+  <text x="245" y="150" font-family="sans-serif" font-size="13" font-weight="bold">C</text>
+  <text x="375" y="135" font-family="sans-serif" font-size="13" font-weight="bold">D</text>
+
+  <!-- Interior angles a (at A) and b (at B) -->
+  <path d="M 125 50 A 20 20 0 0 0 150 50" fill="none" stroke="#1A73E8" stroke-width="2"/>
+  <rect x="130" y="55" width="22" height="18" rx="3" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1"/>
+  <text x="141" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">∠a</text>
+
+  <path d="M 75 130 A 25 25 0 0 0 65 110" fill="none" stroke="#1A73E8" stroke-width="2"/>
+  <rect x="75" y="105" width="22" height="18" rx="3" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1"/>
+  <text x="86" y="118" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">∠b</text>
+
+  <!-- Exterior angle x (at C) -->
+  <path d="M 275 130 A 25 25 0 0 0 230 110" fill="none" stroke="#D9381E" stroke-width="2.5"/>
+  <rect x="270" y="95" width="95" height="24" rx="4" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="317" y="111" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">∠x = ∠a + ∠b</text>
+
+  <text x="210" y="170" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">한 외각의 크기 = 이웃하지 않는 두 내각의 합</text>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 2. 핵심 유형 연습</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">09. [내각과 외각의 비]</div>
+      한 내각의 크기와 한 외각의 크기의 비가 <b>7 : 2</b>인 정다각형의 이름을 구하시오.
+      <div class="answer-line">답: 정 ________ 각형</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">10. [정오각형 내부의 각도]</div>
+      정오각형 ABCDE의 두 대각선 AC와 BD의 교점을 P라 할 때, ∠APB의 크기를 구하시오.
+      <div class="answer-line">답: ∠APB = ________ °</div>
+    </div>
+  </div>
+
+  <!-- 05 심화 11번: 별 모양 다각형 각의 합 -->
+  <div class="step-badge-adv">STEP 3. 05 심화 도전 (별 모양 다각형 각의 합 최고난도)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">11. [별 모양 5각형 꼭짓점의 각의 합]</div>
+    아래 그림과 같은 별 모양 오각형에서 5개의 꼭짓점의 각의 합 (∠A + ∠B + ∠C + ∠D + ∠E)의 크기를 구하시오.
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250" width="100%" height="220">
+  <!-- 5-pointed Star: Top A(170, 30), BR B(260, 210), TL C(40, 100), TR D(300, 100), BL E(80, 210) -->
+  <!-- Connected lines: A->B->C->D->E->A -->
+  <polygon points="170,30 260,210 40,100 300,100 80,210" fill="rgba(235,116,0,0.08)" stroke="#E37400" stroke-width="2.5"/>
+  
+  <!-- Vertices labels & badges -->
+  <circle cx="170" cy="30" r="4" fill="#D9381E"/>
+  <text x="170" y="20" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold">∠A</text>
+
+  <circle cx="300" cy="100" r="4" fill="#D9381E"/>
+  <text x="320" y="105" font-family="sans-serif" font-size="13" font-weight="bold">∠B</text>
+
+  <circle cx="260" cy="210" r="4" fill="#D9381E"/>
+  <text x="275" y="225" font-family="sans-serif" font-size="13" font-weight="bold">∠C</text>
+
+  <circle cx="80" cy="210" r="4" fill="#D9381E"/>
+  <text x="65" y="225" font-family="sans-serif" font-size="13" font-weight="bold">∠D</text>
+
+  <circle cx="40" cy="100" r="4" fill="#D9381E"/>
+  <text x="20" y="105" font-family="sans-serif" font-size="13" font-weight="bold">∠E</text>
+
+  <!-- Formula Badge in center -->
+  <rect x="90" y="125" width="160" height="26" rx="5" fill="#FFF" stroke="#E37400" stroke-width="1.5"/>
+  <text x="170" y="142" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E37400">∠A+∠B+∠C+∠D+∠E = 180°</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1.1; font-size: 12.5px;">
+        💡 <b>핵심 힌트:</b><br/>
+        삼각형의 외각 성질을 2번 연속 적용하여, 5개의 각을 <b>하나의 삼각형 내부의 세 각으로 모으기</b>!
+        <div class="answer-line" style="margin-top: 35px;">답: ________ °</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 2 / Ⅱ. 평면도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 3: 06. 원과 부채꼴 (개념 & 기초 드릴)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>06. 원과 부채꼴</span>
+    <span style="font-size: 12.5px; font-weight: normal;">호의 길이 &amp; 부채꼴의 넓이 공식</span>
+  </div>
+
+  <!-- 1분 비주얼 개념: 부채꼴 공식 -->
+  <div class="concept-card">
+    <h3>⚡ 1분 핵심 비주얼 개념: 부채꼴의 호의 길이와 넓이 공식</h3>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 190" width="100%" height="170">
+  <!-- Sector Graphic on Left -->
+  <g transform="translate(20, 15)">
+    <!-- Sector: center (40, 140), r = 110, angle = 60 deg (from -90 to -30 => 0 to 60 deg from vertical) -->
+    <!-- Arc: (40, 30) to (40+110*cos(30), 140-110*sin(30)) = (135, 85) -->
+    <path d="M 40 140 L 40 30 A 110 110 0 0 1 135 85 Z" fill="rgba(26,115,232,0.12)" stroke="#1A73E8" stroke-width="2.5"/>
+    <circle cx="40" cy="140" r="4" fill="#333"/>
+    <text x="28" y="152" font-family="sans-serif" font-size="13" font-weight="bold">O</text>
+    
+    <!-- Radius r -->
+    <text x="25" y="85" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">r (반지름)</text>
+
+    <!-- Center angle x° -->
+    <path d="M 40 115 A 25 25 0 0 1 61 127" fill="none" stroke="#D9381E" stroke-width="2"/>
+    <text x="52" y="115" font-family="sans-serif" font-size="11" font-weight="bold" fill="#D9381E">x°</text>
+
+    <!-- Arc length l -->
+    <text x="110" y="50" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">호의 길이 l</text>
+    <text x="75" y="90" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">넓이 S</text>
+  </g>
+
+  <!-- Formulas on Right -->
+  <g transform="translate(210, 15)">
+    <rect x="0" y="0" width="310" height="160" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    
+    <!-- 1. Arc length -->
+    <rect x="15" y="15" width="280" height="38" rx="5" fill="#FFF" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="155" y="38" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">호의 길이: l = 2πr × (x / 360)</text>
+
+    <!-- 2. Area -->
+    <rect x="15" y="62" width="280" height="38" rx="5" fill="#FFF" stroke="#188038" stroke-width="1.5"/>
+    <text x="155" y="85" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#188038">넓이: S = πr² × (x / 360)</text>
+
+    <!-- 3. S = 1/2 lr -->
+    <rect x="15" y="110" width="280" height="38" rx="5" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="155" y="133" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">★ 핵심 공식: S = 1/2 × l × r</text>
+  </g>
+</svg>
+</div>
+  </div>
+
+  <div class="step-badge">STEP 1. 기초 정비례 드릴 (6제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">[12~14] 중심각과 호/현의 관계 (○, ✕)</div>
+      <b>12.</b> 부채꼴의 호의 길이는 중심각의 크기에 정비례한다. ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>13.</b> 부채꼴의 넓이는 중심각의 크기에 정비례한다. ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )<br/>
+      <b>14.</b> 원에서 현의 길이는 중심각의 크기에 정비례한다. ➔ ( &nbsp;&nbsp;&nbsp;&nbsp; )
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">[15~17] 기본 계산 드릴</div>
+      <b>15.</b> 반지름 6 cm, 중심각 60°인 부채꼴 호의 길이: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cm<br/>
+      <b>16.</b> 반지름 6 cm, 중심각 60°인 부채꼴 넓이: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cm²<br/>
+      <b>17.</b> 반지름 10 cm, 호의 길이 4π cm인 부채꼴 넓이: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ) cm²
+    </div>
+  </div>
+
+  <div class="page-footer">Page 3 / Ⅱ. 평면도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 4: 06. 원과 부채꼴 (유형 집중 연습)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>06. 원과 부채꼴</span>
+    <span style="font-size: 12.5px; font-weight: normal;">유형별 둘레 &amp; 넓이 계산</span>
+  </div>
+
+  <div class="step-badge">STEP 2. 핵심 유형 연습 (4제)</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">18. [호의 길이로 중심각 구하기]</div>
+      반지름의 길이가 9 cm이고, 호의 길이가 6π cm인 부채꼴의 <b>중심각의 크기 x</b>를 구하시오.
+      <div class="answer-line">답: x = ________ °</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">19. [S = 1/2 lr 공식 활용]</div>
+      둘레의 길이가 20 cm이고 넓이가 24 cm²인 부채꼴의 <b>반지름의 길이 r</b>을 구하시오. (단, r &gt; 3)
+      <div class="answer-line">답: r = ________ cm</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">20. [색칠한 부분의 둘레 구하기]</div>
+      반지름의 길이가 12 cm, 중심각이 45°인 부채꼴에서 호의 길이와 두 반지름을 합한 <b>부채꼴 전체의 둘레</b>를 구하시오.
+      <div class="answer-line">답: ________ cm</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">21. [원형 트랙의 넓이]</div>
+      반지름이 각각 8 cm, 5 cm인 두 동심원으로 이루어진 고리 모양 도형의 넓이를 구하시오.
+      <div class="answer-line">답: ________ π cm²</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 4 / Ⅱ. 평면도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 5: 06. 원과 부채꼴 (심화 도전 - 나뭇잎 넓이 & 원 묶은 끈)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>06. 원과 부채꼴</span>
+    <span style="font-size: 12.5px; font-weight: normal;">기하 융합 최고난도 심화 2제</span>
+  </div>
+
+  <div class="step-badge-adv">STEP 3. 06 심화 도전 (내신 1등급 빈출 최고난도)</div>
+
+  <!-- 심화 22: 나뭇잎 넓이 -->
+  <div class="problem-box">
+    <div class="problem-title">22. [나뭇잎 모양 색칠한 부분의 넓이 구하기]</div>
+    아래 그림과 같이 한 변의 길이가 10 cm인 정사각형 ABCD에서 두 꼭짓점 B, D를 중심으로 하는 사분원 2개를 그렸다. 색칠한(나뭇잎 모양) 부분의 넓이를 구하시오.
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="100%" height="200">
+  <!-- Square ABCD (160x160): A(50,30), B(50,190), C(210,190), D(210,30) -->
+  <rect x="50" y="30" width="160" height="160" fill="none" stroke="#222" stroke-width="2"/>
+  
+  <!-- Leaf Shaded Area (Intersection of two quarter circles) -->
+  <!-- Arc 1 from B(50, 190): (50,30) to (210,190) -->
+  <!-- Arc 2 from D(210, 30): (210,190) to (50,30) -->
+  <path d="M 50 30 A 160 160 0 0 1 210 190 A 160 160 0 0 1 50 30 Z" fill="rgba(24,128,56,0.3)" stroke="#188038" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="38" y="30" font-family="sans-serif" font-size="13" font-weight="bold">A</text>
+  <text x="38" y="200" font-family="sans-serif" font-size="13" font-weight="bold">B</text>
+  <text x="218" y="200" font-family="sans-serif" font-size="13" font-weight="bold">C</text>
+  <text x="218" y="30" font-family="sans-serif" font-size="13" font-weight="bold">D</text>
+
+  <!-- Side dimensions -->
+  <rect x="235" y="95" width="80" height="24" rx="4" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5"/>
+  <text x="275" y="111" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">한 변 = 10 cm</text>
+
+  <rect x="90" y="95" width="80" height="24" rx="4" fill="#FFF" stroke="#188038" stroke-width="1.5"/>
+  <text x="130" y="111" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#188038">색칠한 넓이?</text>
+
+  <text x="190" y="222" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#555">색칠한 넓이 = (사분원 2개 넓이의 합) - (정사각형 넓이)</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1; font-size: 12.5px;">
+        💡 <b>핵심 풀이법:</b><br/>
+        • 사분원 1개의 넓이 = π × 10² × (90/360) = 25π cm²<br/>
+        • 사분원 2개의 넓이 합 = 50π cm²<br/>
+        • <b>색칠한 부분의 넓이 = (사분원 2개 합) - (정사각형 넓이)</b>
+        <div class="answer-line" style="margin-top: 25px;">답: ( ________ π - ________ ) cm²</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 심화 23: 원 3개를 묶은 끈의 길이 -->
+  <div class="problem-box">
+    <div class="problem-title">23. [원 3개를 묶은 끈의 최소 길이]</div>
+    아래 그림과 같이 반지름의 길이가 4 cm인 서로 접하는 원 3개를 끈으로 팽팽하게 묶을 때, 필요한 <b>끈의 최소 길이</b>를 구하시오. (단, 매듭의 길이는 생각하지 않는다.)
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <div style="flex: 1; text-align: center;">
+        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 240" width="100%" height="210">
+  <!-- Three touching circles of radius r=35 -->
+  <!-- Circle 1 (Top): (190, 75) -->
+  <!-- Circle 2 (BL): (155, 135) -->
+  <!-- Circle 3 (BR): (225, 135) -->
+  <circle cx="190" cy="75" r="35" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+  <circle cx="155" cy="135" r="35" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+  <circle cx="225" cy="135" r="35" fill="rgba(26,115,232,0.1)" stroke="#1A73E8" stroke-width="2"/>
+  
+  <circle cx="190" cy="75" r="3" fill="#333"/>
+  <circle cx="155" cy="135" r="3" fill="#333"/>
+  <circle cx="225" cy="135" r="3" fill="#333"/>
+
+  <!-- Rope boundary: straight parts + round corners -->
+  <!-- Straight segments of length 2r = 70: Left, Right, Bottom -->
+  <!-- Total straight = 3 * 2r = 6r = 6 * 4 = 24 cm (with r=4) -->
+  <!-- Round parts sum to 1 full circle = 2 * pi * r -->
+  <rect x="155" y="170" width="70" height="2" fill="#D9381E"/>
+  
+  <!-- Outer Rope path -->
+  <path d="M 155 170 L 225 170 A 35 35 0 0 0 255 118 L 220 57 A 35 35 0 0 0 160 57 L 125 118 A 35 35 0 0 0 155 170 Z" fill="none" stroke="#D9381E" stroke-width="3"/>
+
+  <!-- Dimension Badge -->
+  <rect x="25" y="85" width="85" height="24" rx="4" fill="#FFF4F2" stroke="#D9381E" stroke-width="1.5"/>
+  <text x="67" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">반지름 r = 4 cm</text>
+
+  <text x="190" y="210" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">끈의 최소 길이 = (직선 부분 3개) + (원 1개 둘레)</text>
+  <text x="190" y="230" text-anchor="middle" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#D9381E">= (3 × 8) + 8π = 24 + 8π cm</text>
+</svg>
+</div>
+      </div>
+      <div style="flex: 1; font-size: 12.5px;">
+        💡 <b>핵심 풀이법:</b><br/>
+        • 직선 부분: 지름(8 cm) × 3개 = 24 cm<br/>
+        • 곡선 부분: 모퉁이 호 3개를 합치면 정확히 <b>원 1개의 둘레(2πr = 8π)</b>!<br/>
+        • <b>끈의 최소 길이 = 직선 부분 + 곡선 부분</b>
+        <div class="answer-line" style="margin-top: 25px;">답: ( ________ + ________ π ) cm</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 5 / Ⅱ. 평면도형</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 6: 정답 및 해설집 (맨 뒷페이지 분리)
+     ========================================== -->
+<div class="page">
+  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] Ⅱ. 평면도형 (05~06단원 완결본)</div>
+  <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">과외 선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
+
+  <!-- 05단원 해설 -->
+  <div class="ans-sub-title">05. 다각형의 성질 (1~11번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>01~04</th>
+      <td>
+        <b>01:</b> 4개 (7 - 3 = 4)<br/>
+        <b>02:</b> 14개 (7 × 4 ÷ 2 = 14)<br/>
+        <b>03:</b> 팔각형 (n(n-3)/2 = 20 ➔ n(n-3) = 40 ➔ n = 8)<br/>
+        <b>04:</b> 삼각형 (3 - 3 = 0개)
+      </td>
+    </tr>
+    <tr>
+      <th>05~08</th>
+      <td>
+        <b>05:</b> 720° (180° × (6 - 2) = 720°)<br/>
+        <b>06:</b> 360° (모든 다각형의 외각 합은 항상 360°)<br/>
+        <b>07:</b> 135° (외각 = 360° ÷ 8 = 45° ➔ 내각 = 180° - 45° = 135°)<br/>
+        <b>08:</b> 정십이각형 (360° ÷ 30° = 12)
+      </td>
+    </tr>
+    <tr>
+      <th>09~10</th>
+      <td>
+        <b>09:</b> 정구각형 (내각 + 외각 = 180° 이므로 한 외각 = 180° × 2/9 = 40°. 변의 수 = 360° ÷ 40° = 9)<br/>
+        <b>10:</b> 108° (정오각형 한 내각 = 108°. 이등변삼각형 △ABC에서 ∠BAC = ∠BCA = 36°. △ABP에서 ∠PAB = 108° - 36° = 72°, ∠PBA = 36° ➔ ∠APB = 180° - (72° + 36°) = <b>108°</b>)
+      </td>
+    </tr>
+    <tr>
+      <th>11 (심화)</th>
+      <td>
+        <b>180°</b><br/>
+        (외각의 성질에 의해 별의 안쪽 삼각형들로 각을 모으면, 5개의 각의 합은 삼각형의 세 내각의 총합인 <b>180°</b>가 됩니다.)
+      </td>
+    </tr>
+  </table>
+
+  <!-- 06단원 해설 -->
+  <div class="ans-sub-title">06. 원과 부채꼴 (12~23번)</div>
+  <table class="ans-table">
+    <tr>
+      <th>12~14</th>
+      <td><b>12:</b> ○ &nbsp;|&nbsp; <b>13:</b> ○ &nbsp;|&nbsp; <b>14:</b> ✕ (현의 길이는 중심각에 정비례하지 않음)</td>
+    </tr>
+    <tr>
+      <th>15~17</th>
+      <td>
+        <b>15:</b> 2π cm (2π × 6 × 60/360 = 2π)<br/>
+        <b>16:</b> 6π cm² (π × 6² × 60/360 = 6π)<br/>
+        <b>17:</b> 20π cm² (S = 1/2 × l × r = 1/2 × 4π × 10 = 20π)
+      </td>
+    </tr>
+    <tr>
+      <th>18~21</th>
+      <td>
+        <b>18:</b> 120° (2π × 9 × x/360 = 6π ➔ x/20 = 6 ➔ x = 120°)<br/>
+        <b>19:</b> 4 cm 또는 6 cm (둘레 = 2r + l = 20, 넓이 = 1/2 lr = 24 ➔ r(20 - 2r)/2 = 24 ➔ r(10 - r) = 24 ➔ r = 4 or 6 cm)<br/>
+        <b>20:</b> 3π + 24 cm (호의 길이 = 2π × 12 × 45/360 = 3π, 둘레 = 3π + 12 + 12 = 3π + 24)<br/>
+        <b>21:</b> 39π cm² (π × 8² - π × 5² = 64π - 25π = 39π)
+      </td>
+    </tr>
+    <tr>
+      <th>22~23 (심화)</th>
+      <td>
+        <b>22:</b> <b>50π - 100 cm²</b><br/>
+        (사분원 2개의 넓이 합 = 2 × (π × 10² × 1/4) = 50π cm². 정사각형 넓이 = 10 × 10 = 100 cm².<br/>
+        따라서 색칠한 부분의 넓이 = <b>50π - 100 cm²</b>)<br/><br/>
+        <b>23:</b> <b>24 + 8π cm</b><br/>
+        (직선 부분 = 지름(8 cm) × 3 = 24 cm.<br/>
+        곡선 부분 = 반지름 4 cm인 원 1개의 둘레 = 2π × 4 = 8π cm.<br/>
+        따라서 끈의 최소 길이 = <b>24 + 8π cm</b>)
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-footer">Page 6 (정답 및 해설집) / Ⅱ. 평면도형</div>
+</div>
+
+</body>
+</html>
