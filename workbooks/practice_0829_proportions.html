@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>[중1 수학] 08/29 연습문제 풀이 - 정비례와 반비례 유형 정복 10제</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    * { box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #f4f6f8; color: #212529; padding: 20px; line-height: 1.6; }
+    
+    .page { 
+      max-width: 840px; 
+      margin: 0 auto 30px auto; 
+      background: white; 
+      padding: 36px 45px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06); 
+      position: relative;
+    }
+    
+    .cover-header { 
+      border-bottom: 3px solid #e37400; 
+      padding-bottom: 12px; 
+      margin-bottom: 18px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+    }
+    .cover-header h1 { margin: 0; font-size: 23px; color: #e37400; }
+    .cover-header .sub { font-size: 13px; color: #1a73e8; font-weight: bold; }
+    .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
+    
+    .section-banner {
+      background: linear-gradient(90deg, #e37400, #f59e0b);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 15.5px;
+      font-weight: bold;
+      margin: 18px 0 12px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .concept-card { 
+      background: #fffbf0; 
+      border: 1px solid #fde68a; 
+      border-left: 5px solid #f59e0b; 
+      padding: 12px 16px; 
+      border-radius: 8px; 
+      margin-bottom: 14px; 
+    }
+    
+    .step-badge { 
+      display: inline-block; 
+      background: #e9ecef; 
+      color: #343a40; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #495057; 
+      margin: 10px 0 8px 0; 
+    }
+    
+    .step-badge-adv {
+      display: inline-block; 
+      background: #fee2e2; 
+      color: #991b1b; 
+      font-size: 13px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 4px; 
+      border-left: 4px solid #dc2626; 
+      margin: 12px 0 8px 0; 
+    }
+    
+    .problem-box { 
+      background: #ffffff; 
+      border: 1px solid #e2e8f0; 
+      border-radius: 8px; 
+      padding: 12px 15px; 
+      margin-bottom: 10px; 
+    }
+    .problem-title { font-weight: bold; font-size: 13.5px; color: #1e293b; margin-bottom: 5px; }
+    .problem-img { text-align: center; margin: 6px 0; }
+    
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    
+    .answer-line { 
+      min-height: 26px; 
+      border-bottom: 1px dashed #cbd5e1; 
+      margin-top: 6px; 
+      display: flex; 
+      align-items: flex-end; 
+      justify-content: flex-end; 
+      color: #94a3b8; 
+      font-size: 12px; 
+      padding-bottom: 2px; 
+    }
+    
+    .nav-link {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-link:hover { text-decoration: underline; }
+    
+    .page-footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 20px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 6px;
+    }
+
+    .ans-sheet-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #b45309;
+      border-bottom: 3px solid #b45309;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 9px;
+      text-align: left;
+    }
+    .ans-table th {
+      background: #fffbeb;
+      color: #78350f;
+      font-weight: 600;
+      width: 15%;
+      text-align: center;
+    }
+    
+    @media print {
+      body { background: white; padding: 0; }
+      .nav-link { display: none; }
+      .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: 핵심 유형 1~5번 (판별, 식 구하기, 점 대입, 사분면)
+     ========================================== -->
+<div class="page">
+  <a href="../index.html" class="nav-link">◀ 포털 홈으로 돌아가기</a>
+  
+  <div class="cover-header">
+    <div>
+      <div class="sub">특별 맞춤 과외 워크북</div>
+      <h1>08/29 연습문제 풀이 (정비례·반비례 유형 정복)</h1>
+    </div>
+    <div class="meta">이름: ______________ | 날짜: 08. 29.</div>
+  </div>
+
+  <div class="concept-card">
+    <div style="font-size: 13px; font-weight: bold; color: #b45309; margin-bottom: 6px;">⚡ 1분 핵심 비주얼 정리</div>
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 170" width="100%" height="150">
+  <!-- Direct Proportion -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="260" height="150" rx="8" fill="#F0F4FF" stroke="#C5D9F8"/>
+    <text x="130" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1A73E8">1. 정비례 (y = ax, a ≠ 0)</text>
+    <text x="20" y="55" font-family="sans-serif" font-size="12" fill="#333">• x가 2배, 3배... ➔ y도 2배, 3배...</text>
+    <text x="20" y="80" font-family="sans-serif" font-size="12" fill="#333">• <b>y / x = a</b> (비율이 일정!)</text>
+    <rect x="15" y="100" width="230" height="36" rx="5" fill="#FFF" stroke="#1A73E8" stroke-width="1.5"/>
+    <text x="130" y="123" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">그래프: 원점(0,0)을 지나는 직선</text>
+  </g>
+
+  <!-- Inverse Proportion -->
+  <g transform="translate(290, 10)">
+    <rect x="0" y="0" width="260" height="150" rx="8" fill="#FFF4F2" stroke="#F5CAC5"/>
+    <text x="130" y="24" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#D9381E">2. 반비례 (y = a / x, a ≠ 0)</text>
+    <text x="20" y="55" font-family="sans-serif" font-size="12" fill="#333">• x가 2배, 3배... ➔ y는 1/2배, 1/3배...</text>
+    <text x="20" y="80" font-family="sans-serif" font-size="12" fill="#333">• <b>x × y = a</b> (곱이 일정!)</text>
+    <rect x="15" y="100" width="230" height="36" rx="5" fill="#FFF" stroke="#D9381E" stroke-width="1.5"/>
+    <text x="130" y="123" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">그래프: 좌표축에 닿지 않는 한 쌍의 곡선</text>
+  </g>
+</svg></div>
+  </div>
+
+  <div class="step-badge">PART 1. 기본 식 세우기 &amp; 점 대입 유형 (01~05번)</div>
+
+  <div class="problem-box">
+    <div class="problem-title">01. [정비례와 반비례의 판별]</div>
+    다음 중 \(y\)가 \(x\)에 <b>반비례</b>하는 것을 모두 고르시오. (정답 2개)<br/>
+    ① 한 자루에 500원인 연필 \(x\)자루의 가격 \(y\)원<br/>
+    ② 넓이가 \(48\text{cm}^2\)인 직사각형의 가로의 길이 \(x\text{cm}\)와 세로의 길이 \(y\text{cm}\)<br/>
+    ③ 시속 \(x\text{km}\)로 \(100\text{km}\)를 달릴 때 걸리는 시간 \(y\)시간<br/>
+    ④ 하루 24시간 중 낮의 시간 \(x\)시간과 밤의 시간 \(y\)시간<br/>
+    ⑤ 둘레의 길이가 \(20\text{cm}\)인 직사각형의 가로 \(x\text{cm}\)와 세로 \(y\text{cm}\)
+    <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">02. [정비례 관계식과 미지수 구하기]</div>
+      \(y\)가 \(x\)에 정비례하고, \(x = 3\)일 때 \(y = -12\)이다.<br/>
+      (1) \(x\)와 \(y\) 사이의 관계식을 구하시오.<br/>
+      (2) 점 \((k, 8)\)이 이 그래프 위의 점일 때, \(k\)의 값을 구하시오.
+      <div class="answer-line">답: (1) \(y\) = ________ &nbsp;|&nbsp; (2) \(k\) = ________</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">03. [반비례 관계식과 미지수 구하기]</div>
+      \(y\)가 \(x\)에 반비례하고, \(x = -4\)일 때 \(y = 6\)이다.<br/>
+      (1) \(x\)와 \(y\) 사이의 관계식을 구하시오.<br/>
+      (2) 점 \((8, m)\)이 이 그래프 위의 점일 때, \(m\)의 값을 구하시오.
+      <div class="answer-line">답: (1) \(y\) = ________ &nbsp;|&nbsp; (2) \(m\) = ________</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">04. [그래프가 지나는 사분면]</div>
+      반비례 관계 \(y = -\frac{15}{x}\)의 그래프에 대한 설명으로 <b>옳지 않은 것</b>은?<br/>
+      ① 제2사분면과 제4사분면을 지난다.<br/>
+      ② 원점에 대하여 대칭인 한 쌍의 곡선이다.<br/>
+      ③ 점 \((-3, 5)\)를 지난다.<br/>
+      ④ \(x > 0\)일 때, \(x\)의 값이 증가하면 \(y\)의 값은 감소한다.
+      <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">05. [그래프 위의 점과 일차방정식]</div>
+      점 \(A(2a - 1,\; 3a + 7)\)이 정비례 관계 \(y = 4x\)의 그래프 위의 점일 때, 상수 \(a\)의 값을 구하시오.
+      <div class="answer-line" style="margin-top: 25px;">답: \(a\) = ________</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 1 / 08/29 연습문제 풀이</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 2: 심화 및 실생활 응용 6~10번 (톱니바퀴, 속력, 교점, 넓이)
+     ========================================== -->
+<div class="page">
+  <div class="section-banner">
+    <span>PART 2. 실생활 응용 &amp; 기하 융합 심화 (06~10번)</span>
+    <span style="font-size: 12.5px; font-weight: normal;">실전 내신 대비</span>
+  </div>
+
+  <!-- 06번: 톱니바퀴 -->
+  <div class="problem-box">
+    <div class="problem-title">06. [실생활 반비례 - 톱니바퀴 회전수]</div>
+    톱니 수가 36개인 톱니바퀴 A가 1분에 5회 회전할 때, 이에 맞물려 돌아가는 톱니 수 \(x\)개인 톱니바퀴 B는 1분에 \(y\)회 회전한다.<br/>
+    (1) \(x\)와 \(y\) 사이의 관계식을 구하시오.<br/>
+    (2) 톱니바퀴 B의 톱니 수가 20개일 때, 1분당 회전수 \(y\)를 구하시오.
+    <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 160" width="100%" height="140">
+  <rect x="5" y="5" width="430" height="150" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  
+  <!-- Gear A -->
+  <circle cx="110" cy="75" r="45" fill="rgba(26,115,232,0.15)" stroke="#1A73E8" stroke-width="2.5"/>
+  <circle cx="110" cy="75" r="8" fill="#1A73E8"/>
+  <text x="110" y="70" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold">A 톱니</text>
+  <text x="110" y="88" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#1A73E8">36개 (5회전)</text>
+
+  <!-- Gear B -->
+  <circle cx="210" cy="75" r="30" fill="rgba(217,56,30,0.15)" stroke="#D9381E" stroke-width="2.5"/>
+  <circle cx="210" cy="75" r="6" fill="#D9381E"/>
+  <text x="210" y="72" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold">B 톱니</text>
+  <text x="210" y="88" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#D9381E">x개 (y회전)</text>
+
+  <!-- Formula Badge -->
+  <g transform="translate(260, 40)">
+    <rect x="0" y="0" width="160" height="70" rx="6" fill="#FFF" stroke="#333" stroke-width="1.5"/>
+    <text x="80" y="24" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">★ 맞물린 총 톱니 수 불변</text>
+    <text x="80" y="45" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">36 × 5 = x × y</text>
+    <text x="80" y="62" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">y = 180 / x (반비례!)</text>
+  </g>
+</svg></div>
+    <div class="answer-line">답: (1) \(y\) = ________ &nbsp;|&nbsp; (2) ________ 회</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">07. [실생활 - 일정 거리 속력과 시간]</div>
+      \(60\text{km}\) 떨어진 목적지까지 시속 \(x\text{km}\)로 달릴 때 걸리는 시간을 \(y\)시간이라 한다.<br/>
+      (1) \(x\)와 \(y\) 사이의 관계식을 쓰시오.<br/>
+      (2) 시속 \(15\text{km}\)의 자전거로 갈 때 걸리는 시간은?
+      <div class="answer-line">답: (1) \(y\) = ________ &nbsp;|&nbsp; (2) ________ 시간</div>
+    </div>
+
+    <!-- 08번: 정비례와 반비례의 교점 -->
+    <div class="problem-box">
+      <div class="problem-title">08. [정비례와 반비례의 교점 좌표]</div>
+      정비례 \(y = 2x\)와 반비례 \(y = \frac{18}{x}\)가 제1사분면에서 만나는 교점을 \(P(p, q)\)라 할 때, \(p + q\)의 값을 구하시오.
+      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" width="100%" height="190">
+  <!-- Axes -->
+  <line x1="40" y1="180" x2="340" y2="180" stroke="#333" stroke-width="1.5"/>
+  <line x1="60" y1="200" x2="60" y2="20" stroke="#333" stroke-width="1.5"/>
+  <text x="345" y="184" font-family="sans-serif" font-size="11">x</text>
+  <text x="55" y="18" font-family="sans-serif" font-size="11">y</text>
+  <text x="48" y="195" font-family="sans-serif" font-size="11">O</text>
+
+  <!-- Line y = 2x : (60, 180) to (180, 60) where x=3 => x_pixel = 60 + 3*30 = 150, y=6 => y_pixel = 180 - 6*15 = 90 -->
+  <line x1="60" y1="180" x2="220" y2="20" stroke="#1A73E8" stroke-width="2.5"/>
+  <text x="225" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1A73E8">y = 2x</text>
+
+  <!-- Curve y = 18/x : x=1(90, -90), x=2(120, 45), x=3(150, 90), x=6(240, 135), x=9(330, 150) -->
+  <path d="M 90 20 Q 120 70 150 90 T 330 155" fill="none" stroke="#D9381E" stroke-width="2.5"/>
+  <text x="290" y="140" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">y = 18 / x</text>
+
+  <!-- Intersection Point P(3, 6) at (150, 90) -->
+  <line x1="150" y1="180" x2="150" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="60" y1="90" x2="150" y2="90" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <circle cx="150" cy="90" r="5" fill="#333"/>
+  <text x="155" y="82" font-family="sans-serif" font-size="13" font-weight="bold">P(p, q)</text>
+
+  <text x="150" y="195" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold">p</text>
+  <text x="45" y="94" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="bold">q</text>
+</svg></div>
+      <div class="answer-line">답: \(p + q\) = ________</div>
+    </div>
+  </div>
+
+  <!-- 심화 09 & 10 -->
+  <div class="step-badge-adv">STEP 3. 최고난도 기하 융합 2제</div>
+
+  <div class="grid-2">
+    <div class="problem-box">
+      <div class="problem-title">09. [반비례 위의 직사각형 넓이 불변성]</div>
+      반비례 \(y = \frac{a}{x}\) (\(x > 0, a > 0\)) 그래프 위의 임의의 한 점 \(P\)에서 \(x\)축, \(y\)축에 각각 수선의 발을 내려 만든 직사각형의 넓이가 24이다.<br/>
+      (1) 상수 \(a\)의 값을 구하시오.<br/>
+      (2) 점 \(P\)의 \(x\)좌표가 6일 때, 점 \(P\)의 \(y\)좌표를 구하시오.
+      <div class="answer-line">답: (1) \(a\) = ________ &nbsp;|&nbsp; (2) \(y\) = ________</div>
+    </div>
+
+    <div class="problem-box">
+      <div class="problem-title">10. [두 정비례 직선과 삼각형의 넓이]</div>
+      두 직선 \(y = 2x\)와 \(y = \frac{1}{2}x\), 그리고 직선 \(x = 6\)으로 둘러싸인 삼각형 \(OAB\)의 넓이를 구하시오.
+      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 230" width="100%" height="200">
+  <!-- Axes -->
+  <line x1="40" y1="190" x2="340" y2="190" stroke="#333" stroke-width="1.5"/>
+  <line x1="60" y1="210" x2="60" y2="20" stroke="#333" stroke-width="1.5"/>
+  <text x="345" y="194" font-family="sans-serif" font-size="11">x</text>
+  <text x="55" y="18" font-family="sans-serif" font-size="11">y</text>
+  <text x="48" y="205" font-family="sans-serif" font-size="11">O</text>
+
+  <!-- x = 6 line at x=240 -->
+  <line x1="240" y1="20" x2="240" y2="200" stroke="#E37400" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="240" y="215" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E37400">x = 6</text>
+
+  <!-- Line 1: y = 2x (0,0) -> (6, 12) at (240, 40) -->
+  <line x1="60" y1="190" x2="270" y2="15" stroke="#1A73E8" stroke-width="2"/>
+  <text x="275" y="25" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1A73E8">y = 2x</text>
+
+  <!-- Line 2: y = 1/2x (0,0) -> (6, 3) at (240, 145) -->
+  <line x1="60" y1="190" x2="330" y2="100" stroke="#188038" stroke-width="2"/>
+  <text x="335" y="105" font-family="sans-serif" font-size="11" font-weight="bold" fill="#188038">y = 1/2 x</text>
+
+  <!-- Triangle Polygon (60,190), (240,40), (240,145) -->
+  <polygon points="60,190 240,40 240,145" fill="rgba(235,116,0,0.18)" stroke="#E37400" stroke-width="2"/>
+  
+  <circle cx="240" cy="40" r="4" fill="#1A73E8"/>
+  <text x="248" y="42" font-family="sans-serif" font-size="12" font-weight="bold">A(6, 12)</text>
+
+  <circle cx="240" cy="145" r="4" fill="#188038"/>
+  <text x="248" y="152" font-family="sans-serif" font-size="12" font-weight="bold">B(6, 3)</text>
+
+  <!-- Side length mark AB = 9 -->
+  <text x="210" y="95" text-anchor="end" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D9381E">밑변 = 9</text>
+  <text x="140" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#333">높이 = 6</text>
+</svg></div>
+      <div class="answer-line">답: 넓이 = ________</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Page 2 / 08/29 연습문제 풀이</div>
+</div>
+
+
+<!-- ==========================================
+     PAGE 3: 정답 및 친절한 해설집 (맨 뒷페이지 분리)
+     ========================================== -->
+<div class="page">
+  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] 08/29 정비례·반비례 연습문제 10제</div>
+  <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
+
+  <table class="ans-table">
+    <tr>
+      <th>01</th>
+      <td>
+        <b>②, ③</b><br/>
+        • ① \(y = 500x\) (정비례)<br/>
+        • ② \(x \times y = 48 \rightarrow y = \frac{48}{x}\) (반비례)<br/>
+        • ③ \(y = \frac{100}{x}\) (반비례)<br/>
+        • ④ \(y = 24 - x\) (정비례도 반비례도 아님)<br/>
+        • ⑤ \(2(x + y) = 20 \rightarrow y = 10 - x\) (아님)
+      </td>
+    </tr>
+    <tr>
+      <th>02</th>
+      <td>
+        <b>(1) \(y = -4x\) &nbsp;|&nbsp; (2) \(k = -2\)</b><br/>
+        \(y = ax\)에 \((3, -12)\) 대입 ➔ \(-12 = 3a \rightarrow a = -4\).<br/>
+        \(y = -4x\)에 \((k, 8)\) 대입 ➔ \(8 = -4k \rightarrow k = -2\).
+      </td>
+    </tr>
+    <tr>
+      <th>03</th>
+      <td>
+        <b>(1) \(y = -\frac{24}{x}\) &nbsp;|&nbsp; (2) \(m = -3\)</b><br/>
+        \(x \times y = a\) 이므로 \(a = (-4) \times 6 = -24\).<br/>
+        \(y = -\frac{24}{x}\)에 \(x=8\) 대입 ➔ \(m = -\frac{24}{8} = -3\).
+      </td>
+    </tr>
+    <tr>
+      <th>04</th>
+      <td>
+        <b>④번</b><br/>
+        \(a = -15 < 0\) 인 반비례 그래프는 제2사분면과 제4사분면에 위치하며, 각 사분면에서 <b>\(x\)가 증가할 때 \(y\)도 증가</b>합니다. (④번은 감소한다고 했으므로 거짓)
+      </td>
+    </tr>
+    <tr>
+      <th>05</th>
+      <td>
+        <b>\(a = 2.2\) (또는 \(\frac{11}{5}\))</b><br/>
+        \(y = 4x\)에 \(x = 2a - 1, y = 3a + 7\) 대입:<br/>
+        \(3a + 7 = 4(2a - 1) \rightarrow 3a + 7 = 8a - 4 \rightarrow 5a = 11 \rightarrow a = \frac{11}{5} = 2.2\)
+      </td>
+    </tr>
+    <tr>
+      <th>06</th>
+      <td>
+        <b>(1) \(y = \frac{180}{x}\) &nbsp;|&nbsp; (2) 9회</b><br/>
+        맞물린 총 톱니 수 = \(36 \times 5 = 180\)으로 일정. ➔ \(x \times y = 180 \rightarrow y = \frac{180}{x}\).<br/>
+        \(x = 20\) 대입 ➔ \(y = \frac{180}{20} = 9\)회.
+      </td>
+    </tr>
+    <tr>
+      <th>07</th>
+      <td>
+        <b>(1) \(y = \frac{60}{x}\) &nbsp;|&nbsp; (2) 4시간</b><br/>
+        시간 = 거리 ÷ 속력 이므로 \(y = \frac{60}{x}\).<br/>
+        \(x = 15\) 대입 ➔ \(y = \frac{60}{15} = 4\)시간.
+      </td>
+    </tr>
+    <tr>
+      <th>08</th>
+      <td>
+        <b>9</b> (\(p = 3, q = 6 \rightarrow p + q = 9\))<br/>
+        교점에서는 두 식의 \(y\)값이 같으므로: \(2x = \frac{18}{x} \rightarrow 2x^2 = 18 \rightarrow x^2 = 9\).<br/>
+        제1사분면이므로 \(x = 3 (= p)\), 이때 \(y = 2 \times 3 = 6 (= q)\).<br/>
+        따라서 \(p + q = 3 + 6 = \mathbf{9}\).
+      </td>
+    </tr>
+    <tr>
+      <th>09</th>
+      <td>
+        <b>(1) \(a = 24\) &nbsp;|&nbsp; (2) \(y = 4\)</b><br/>
+        반비례 위의 점 \((x, y)\)로 만든 직사각형 넓이는 항상 \(x \times y = a\) 입니다. 따라서 \(a = 24\).<br/>
+        \(x = 6\)일 때 \(y = \frac{24}{6} = 4\).
+      </td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>
+        <b>27</b><br/>
+        \(x = 6\)일 때 두 직선 위의 점:<br/>
+        점 \(A(6, 12)\), 점 \(B(6, 3)\).<br/>
+        선분 \(AB\)의 길이(밑변) = \(12 - 3 = 9\).<br/>
+        삼각형의 높이 = \(6\).<br/>
+        따라서 넓이 = \(\frac{1}{2} \times 9 \times 6 = \mathbf{27}\).
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-footer">Page 3 (정답 및 해설집) / 08/29 연습문제 풀이</div>
+</div>
+
+</body>
+</html>
