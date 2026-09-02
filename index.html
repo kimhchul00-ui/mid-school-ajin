@@ -10,11 +10,66 @@
     body { background-color: #f1f5f9; color: #1e293b; line-height: 1.6; padding: 30px 20px; }
     .container { max-width: 960px; margin: 0 auto; }
     
-    header { text-align: center; margin-bottom: 40px; }
+    header { text-align: center; margin-bottom: 30px; }
     .badge { display: inline-block; background: #e0e7ff; color: #4338ca; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px; }
     header h1 { font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
     header p { font-size: 15px; color: #64748b; }
     
+    /* 특별 연습문제 강조 배너 */
+    .special-section {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 2px solid #f59e0b;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15);
+    }
+    .special-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .special-desc {
+      font-size: 14px;
+      color: #78350f;
+      margin-bottom: 16px;
+    }
+    .special-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-special {
+      display: inline-flex;
+      align-items: center;
+      background: #d97706;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14.5px;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+      transition: all 0.2s ease;
+    }
+    .btn-special:hover {
+      background: #b45309;
+      transform: translateY(-2px);
+    }
+    
+    .section-heading {
+      font-size: 19px;
+      font-weight: 800;
+      color: #334155;
+      margin: 30px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     
     .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: all 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
@@ -31,10 +86,13 @@
     .card ul { list-style: none; margin-bottom: 20px; font-size: 13.5px; color: #475569; display: flex; flex-direction: column; gap: 6px; }
     .card ul li::before { content: "•"; color: #94a3b8; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
     
+    .card-btn-group { display: flex; flex-direction: column; gap: 8px; }
     .card-btn { display: block; text-align: center; background: #1e293b; color: white; text-decoration: none; padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; transition: background 0.2s; }
     .card-btn:hover { background: #0f172a; }
     .card-btn.primary { background: #2563eb; }
     .card-btn.primary:hover { background: #1d4ed8; }
+    .card-btn.sub-btn { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; font-size: 13px; }
+    .card-btn.sub-btn:hover { background: #fef3c7; }
 
     footer { text-align: center; margin-top: 50px; font-size: 13px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
   </style>
@@ -49,17 +107,21 @@
   </header>
 
   <!-- 🌟 특별 과외 연습문제 & 숙제 코너 -->
-  <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px solid #f59e0b; border-radius: 16px; padding: 22px 26px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);">
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-      <div>
-        <span style="background: #f59e0b; color: white; font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 9999px;">NEW 맞춤 연습문제</span>
-        <h2 style="font-size: 20px; font-weight: 800; color: #92400e; margin-top: 6px;">🎯 08/29 연습문제 풀이 (정비례와 반비례 유형 정복 10제)</h2>
-        <p style="font-size: 13.5px; color: #78350f; margin-top: 4px;">• 식 판별, 점 대입, 톱니바퀴 회전수, 속력/시간, 교점 좌표, 직사각형 넓이 불변성, 삼각형 넓이 심화</p>
-      </div>
-      <a href="workbooks/practice_0829_proportions.html" style="background: #d97706; color: white; text-decoration: none; padding: 11px 22px; border-radius: 10px; font-weight: bold; font-size: 14.5px; transition: background 0.2s; white-space: nowrap;" target="_blank">08/29 연습문제 열기 (3P) ➔</a>
+  <div class="special-section">
+    <div class="special-title">
+      <span>🎯</span> 08/29 특별 연습문제 풀이 (정비례와 반비례 10제)
+    </div>
+    <div class="special-desc">
+      정비례/반비례 판별식, 미지수 구하기, 톱니바퀴 회전수, 속력-시간-거리, 교점 좌표, 직사각형 넓이 불변성, 삼각형 넓이 최고난도 심화까지 총 10문제 집중 훈련!
+    </div>
+    <div class="special-links">
+      <a href="workbooks/practice_0829_proportions.html" class="btn-special" target="_blank">
+        👉 08/29 연습문제 워크북 열기 (3P)
+      </a>
     </div>
   </div>
 
+  <div class="section-heading">📖 중1-2 수학 대단원별 정규 통합 워크북</div>
 
   <div class="grid">
     <!-- 0단원 -->
@@ -74,7 +136,10 @@
           <li><b>[심화]</b> 형과 동생의 추월 그래프, 직사각형 넓이</li>
         </ul>
       </div>
-      <a href="workbooks/unit_00_coordinates_and_graphs.html" class="card-btn primary" target="_blank">워크북 열기 (5P) ➔</a>
+      <div class="card-btn-group">
+        <a href="workbooks/unit_00_coordinates_and_graphs.html" class="card-btn primary" target="_blank">0단원 정규 워크북 (5P) ➔</a>
+        <a href="workbooks/practice_0829_proportions.html" class="card-btn sub-btn" target="_blank">🎯 08/29 연습문제 (10제) ➔</a>
+      </div>
     </div>
 
     <!-- 1단원 -->
@@ -89,7 +154,9 @@
           <li>04. 작도와 합동 (SSS, SAS, ASA, 회전합동)</li>
         </ul>
       </div>
-      <a href="workbooks/unit_01_basic_figures.html" class="card-btn primary" target="_blank">워크북 열기 (7P) ➔</a>
+      <div class="card-btn-group">
+        <a href="workbooks/unit_01_basic_figures.html" class="card-btn primary" target="_blank">1단원 정규 워크북 (7P) ➔</a>
+      </div>
     </div>
 
     <!-- 2단원 -->
@@ -104,7 +171,9 @@
           <li><b>[심화]</b> 나뭇잎 모양 색칠한 넓이, 원 3개 묶은 끈</li>
         </ul>
       </div>
-      <a href="workbooks/unit_02_plane_figures.html" class="card-btn primary" target="_blank">워크북 열기 (6P) ➔</a>
+      <div class="card-btn-group">
+        <a href="workbooks/unit_02_plane_figures.html" class="card-btn primary" target="_blank">2단원 정규 워크북 (6P) ➔</a>
+      </div>
     </div>
 
     <!-- 3단원 -->
@@ -119,7 +188,9 @@
           <li><b>[심화]</b> 원뿔대 부피·겉넓이, 사다리꼴 회전체</li>
         </ul>
       </div>
-      <a href="workbooks/unit_03_3d_solids.html" class="card-btn primary" target="_blank">워크북 열기 (6P) ➔</a>
+      <div class="card-btn-group">
+        <a href="workbooks/unit_03_3d_solids.html" class="card-btn primary" target="_blank">3단원 정규 워크북 (6P) ➔</a>
+      </div>
     </div>
 
     <!-- 4단원 -->
@@ -134,7 +205,9 @@
           <li><b>[심화]</b> 전학생 추가 후 평균 변화 역산</li>
         </ul>
       </div>
-      <a href="workbooks/unit_04_statistics.html" class="card-btn primary" target="_blank">워크북 열기 (5P) ➔</a>
+      <div class="card-btn-group">
+        <a href="workbooks/unit_04_statistics.html" class="card-btn primary" target="_blank">4단원 정규 워크북 (5P) ➔</a>
+      </div>
     </div>
   </div>
 
