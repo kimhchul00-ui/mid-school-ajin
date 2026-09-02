@@ -33,6 +33,21 @@
     .cover-header .sub { font-size: 13px; color: #1a73e8; font-weight: bold; }
     .cover-header .meta { font-size: 13px; color: #6c757d; font-weight: 500; }
     
+    /* 비밀 클릭 트리거 스타일 */
+    .secret-trigger {
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+      border-bottom: 2px dashed transparent;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .secret-trigger:hover {
+      color: #b45309;
+      background: #fef3c7;
+      border-bottom: 2px dashed #f59e0b;
+    }
+    
     .section-banner {
       background: linear-gradient(90deg, #e37400, #f59e0b);
       color: white;
@@ -109,6 +124,17 @@
       padding-top: 6px;
     }
 
+    /* 🔒 기본적으로 숨겨진 정답 및 해설 영역 */
+    #answer-section {
+      display: none;
+      animation: fadeIn 0.35s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .ans-sheet-title {
       font-size: 20px;
       font-weight: bold;
@@ -116,7 +142,24 @@
       border-bottom: 3px solid #b45309;
       padding-bottom: 8px;
       margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+    .btn-hide-ans {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .btn-hide-ans:hover {
+      background: #fde68a;
+    }
+    
     .ans-table {
       width: 100%;
       border-collapse: collapse;
@@ -140,7 +183,7 @@
 
     @media print {
       body { background: white; padding: 0; }
-      .nav-link { display: none; }
+      .nav-link, .btn-hide-ans { display: none; }
       .page { box-shadow: none; padding: 18px 20px; max-width: 100%; page-break-after: always; }
     }
   </style>
@@ -156,7 +199,7 @@
   <div class="cover-header">
     <div>
       <div class="sub">특별 맞춤 과외 워크북</div>
-      <h1>08/29 연습문제 풀이 (정비례·반비례 유형 정복)</h1>
+      <h1>08/29 <span class="secret-trigger" onclick="toggleAnswerSection()" title="클릭 시 답안이 열립니다">연습문제 풀이</span> (정비례·반비례 유형 정복)</h1>
     </div>
     <div class="meta">이름: ______________ | 날짜: 08. 29.</div>
   </div>
@@ -312,7 +355,6 @@
     </div>
   </div>
 
-  <!-- 새로 바뀐 09 & 10 (PART 2 실생활 응용 수준으로 교체) -->
   <div class="grid-2">
     <div class="problem-box">
       <div class="problem-title">09. [실생활 정비례 - 용수철의 늘어난 길이]</div>
@@ -336,10 +378,13 @@
 
 
 <!-- ==========================================
-     PAGE 3: 정답 및 친절한 해설집
+     PAGE 3: 정답 및 친절한 해설집 (기본 숨김 처리!)
      ========================================== -->
-<div class="page">
-  <div class="ans-sheet-title">🎯 [정답 및 친절한 해설집] 08/29 정비례·반비례 연습문제 10제</div>
+<div class="page" id="answer-section">
+  <div class="ans-sheet-title">
+    <span>🎯 [정답 및 친절한 해설집] 08/29 정비례·반비례 연습문제 10제</span>
+    <button class="btn-hide-ans" onclick="toggleAnswerSection()">🔒 답안 다시 숨기기</button>
+  </div>
   <div style="font-size: 13px; color: #64748b; margin-bottom: 12px;">선생님 채점용 및 자가 채점용 상세 해설표입니다.</div>
 
   <table class="ans-table">
@@ -430,6 +475,18 @@
 
   <div class="page-footer">Page 3 (정답 및 해설집) / 08/29 연습문제 풀이</div>
 </div>
+
+<script>
+  function toggleAnswerSection() {
+    const ansSec = document.getElementById('answer-section');
+    if (ansSec.style.display === 'block') {
+      ansSec.style.display = 'none';
+    } else {
+      ansSec.style.display = 'block';
+      ansSec.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
 
 </body>
 </html>
