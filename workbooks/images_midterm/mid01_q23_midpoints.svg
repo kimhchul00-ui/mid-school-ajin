@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="100%" height="80">
+  <line x1="30" y1="45" x2="270" y2="45" stroke="#333" stroke-width="2"/>
+  <!-- Points A(30), M(80), B(130), N(200), C(270) -->
+  <circle cx="30" cy="45" r="3.5" fill="#333"/><text x="30" y="65" text-anchor="middle" font-size="11" font-weight="bold">A</text>
+  <circle cx="80" cy="45" r="3" fill="#2563eb"/><text x="80" y="65" text-anchor="middle" font-size="11" font-weight="bold">M</text>
+  <circle cx="130" cy="45" r="3.5" fill="#333"/><text x="130" y="65" text-anchor="middle" font-size="11" font-weight="bold">B</text>
+  <circle cx="200" cy="45" r="3" fill="#2563eb"/><text x="200" y="65" text-anchor="middle" font-size="11" font-weight="bold">N</text>
+  <circle cx="270" cy="45" r="3.5" fill="#333"/><text x="270" y="65" text-anchor="middle" font-size="11" font-weight="bold">C</text>
+  <!-- Length AM = 5cm -->
+  <text x="55" y="38" text-anchor="middle" font-size="10" fill="#2563eb">4cm</text>
+  <!-- Length AC = 12cm -->
+  <path d="M 30 25 L 30 18 L 270 18 L 270 25" fill="none" stroke="#64748b" stroke-width="1.2"/>
+  <text x="150" y="14" text-anchor="middle" font-size="10" fill="#64748b">12cm</text>
+</svg>

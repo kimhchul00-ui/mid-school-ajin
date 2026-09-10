@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" width="100%" height="130">
+  <!-- Parallel lines l and m -->
+  <line x1="25" y1="30" x2="215" y2="30" stroke="#333" stroke-width="2"/>
+  <text x="220" y="34" font-size="12" font-style="italic">l</text>
+  <line x1="25" y1="125" x2="215" y2="125" stroke="#333" stroke-width="2"/>
+  <text x="220" y="129" font-size="12" font-style="italic">m</text>
+  <!-- Bent line: (80,30) -> (120,75) -> (165,125) -->
+  <polyline points="75,30 125,75 165,125" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <!-- Angles -->
+  <path d="M 95 30 A 20 20 0 0 1 85 40" fill="none" stroke="#333"/>
+  <text x="95" y="24" font-size="11">45°</text>
+  <path d="M 115 75 A 15 15 0 0 0 130 83" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="105" y="80" font-size="12" font-weight="bold" fill="#dc2626">x</text>
+  <path d="M 145 125 A 20 20 0 0 1 155 110" fill="none" stroke="#333"/>
+  <text x="170" y="118" font-size="11">80°</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="100%" height="150">
+  <!-- Origin at (100, 110) -->
+  <line x1="20" y1="110" x2="220" y2="110" stroke="#333" stroke-width="1.5"/>
+  <line x1="100" y1="165" x2="100" y2="15" stroke="#333" stroke-width="1.5"/>
+  <text x="223" y="114" font-size="10">x</text>
+  <text x="93" y="15" font-size="10">y</text>
+  <text x="90" y="122" font-size="10">O</text>
+  <!-- Line y = ax -->
+  <line x1="20" y1="135" x2="210" y2="70" stroke="#2563eb" stroke-width="2"/>
+  <!-- Hyperbola y = 12/x in Q1 and Q3 -->
+  <path d="M 115 15 Q 125 65 170 80 T 215 90" fill="none" stroke="#d97706" stroke-width="2"/>
+  <path d="M 85 165 Q 75 145 35 135" fill="none" stroke="#d97706" stroke-width="2"/>
+  <!-- Intersection P(6, 2) -> (170, 80) with y=2 -->
+  <circle cx="170" cy="80" r="4" fill="#dc2626"/>
+  <text x="175" y="75" font-size="12" font-weight="bold">P</text>
+  <line x1="100" y1="80" x2="170" y2="80" stroke="#888" stroke-dasharray="2,2"/>
+  <text x="88" y="84" font-size="11">2</text>
+</svg>

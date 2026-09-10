@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="100%" height="100">
+  <line x1="20" y1="20" x2="180" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="20" y1="100" x2="180" y2="20" stroke="#333" stroke-width="2"/>
+  <!-- Left angle: 2x - 30° -->
+  <text x="65" y="65" font-size="11" font-weight="bold" fill="#2563eb">2x - 30°</text>
+  <!-- Right angle: 60° -->
+  <text x="125" y="65" font-size="11" font-weight="bold" fill="#2563eb">60°</text>
+</svg>

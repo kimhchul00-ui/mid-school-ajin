@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" width="100%" height="120">
+  <line x1="25" y1="110" x2="200" y2="110" stroke="#333" stroke-width="1.5"/>
+  <line x1="25" y1="110" x2="25" y2="15" stroke="#333" stroke-width="1.5"/>
+  <text x="203" y="114" font-size="10">x</text>
+  <text x="18" y="15" font-size="10">y</text>
+  <text x="16" y="122" font-size="10">O</text>
+  <!-- Wave path: oscillates between y=40 and y=95 -->
+  <path d="M 25 95 Q 50 35 75 75 T 125 75 T 175 75 T 195 90" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+</svg>
