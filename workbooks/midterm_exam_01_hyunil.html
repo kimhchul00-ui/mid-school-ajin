@@ -71,7 +71,22 @@
       margin-bottom: 12px; 
     }
     .problem-title { font-weight: bold; font-size: 13.5px; color: #0f172a; margin-bottom: 6px; }
-    .problem-img { text-align: center; margin: 8px 0; }
+    
+    /* PDF 원본 추출 이미지 스타일 */
+    .exam-fig {
+      display: block;
+      margin: 10px auto;
+      max-width: 95%;
+      max-height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
+    }
+    .exam-fig.wide {
+      max-height: 100px;
+    }
+    .exam-fig.tall {
+      max-height: 200px;
+    }
     
     .options { margin-top: 6px; font-size: 12.5px; color: #334155; line-height: 1.8; }
     .options-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
@@ -196,36 +211,7 @@
     <!-- 01번 -->
     <div class="problem-box">
       <div class="problem-title">1. 다음 수직선에서 옳은 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 70" width="100%" height="60">
-  <line x1="20" y1="35" x2="430" y2="35" stroke="#333" stroke-width="2"/>
-  <polygon points="430,31 440,35 430,39" fill="#333"/>
-  <!-- Ticks from -5 to 5. step = 36px. 0 at x=220 -->
-  <!-- -5: 40, -4: 76, -3: 112, -2: 148, -1: 184, 0: 220, 1: 256, 2: 292, 3: 328, 4: 364, 5: 400 -->
-  <!-- ticks -->
-  <line x1="40" y1="30" x2="40" y2="40" stroke="#333" stroke-width="1.5"/><text x="40" y="55" text-anchor="middle" font-size="11">-5</text>
-  <line x1="76" y1="30" x2="76" y2="40" stroke="#333" stroke-width="1.5"/><text x="76" y="55" text-anchor="middle" font-size="11">-4</text>
-  <line x1="112" y1="30" x2="112" y2="40" stroke="#333" stroke-width="1.5"/><text x="112" y="55" text-anchor="middle" font-size="11">-3</text>
-  <line x1="148" y1="30" x2="148" y2="40" stroke="#333" stroke-width="1.5"/><text x="148" y="55" text-anchor="middle" font-size="11">-2</text>
-  <line x1="184" y1="30" x2="184" y2="40" stroke="#333" stroke-width="1.5"/><text x="184" y="55" text-anchor="middle" font-size="11">-1</text>
-  <line x1="220" y1="30" x2="220" y2="40" stroke="#333" stroke-width="1.5"/><text x="220" y="55" text-anchor="middle" font-size="11">0</text>
-  <line x1="256" y1="30" x2="256" y2="40" stroke="#333" stroke-width="1.5"/><text x="256" y="55" text-anchor="middle" font-size="11">1</text>
-  <line x1="292" y1="30" x2="292" y2="40" stroke="#333" stroke-width="1.5"/><text x="292" y="55" text-anchor="middle" font-size="11">2</text>
-  <line x1="328" y1="30" x2="328" y2="40" stroke="#333" stroke-width="1.5"/><text x="328" y="55" text-anchor="middle" font-size="11">3</text>
-  <line x1="364" y1="30" x2="364" y2="40" stroke="#333" stroke-width="1.5"/><text x="364" y="55" text-anchor="middle" font-size="11">4</text>
-  <line x1="400" y1="30" x2="400" y2="40" stroke="#333" stroke-width="1.5"/><text x="400" y="55" text-anchor="middle" font-size="11">5</text>
-  <!-- Point A at -5 -->
-  <circle cx="40" cy="35" r="3.5" fill="#1a73e8"/>
-  <text x="40" y="22" text-anchor="middle" font-weight="bold" font-size="12" fill="#1a73e8">A</text>
-  <!-- Point B at -2 and 1/3 (148 - 12 = 136) -->
-  <circle cx="136" cy="35" r="3.5" fill="#1a73e8"/>
-  <text x="136" y="22" text-anchor="middle" font-weight="bold" font-size="12" fill="#1a73e8">B</text>
-  <!-- Point C at 1 (256) -->
-  <circle cx="256" cy="35" r="3.5" fill="#1a73e8"/>
-  <text x="256" y="22" text-anchor="middle" font-weight="bold" font-size="12" fill="#1a73e8">C</text>
-  <!-- Point D at 3 (328) -->
-  <circle cx="328" cy="35" r="3.5" fill="#1a73e8"/>
-  <text x="328" y="22" text-anchor="middle" font-weight="bold" font-size="12" fill="#1a73e8">D</text>
-</svg></div>
+      <img src="images/midterm_pdf/q01.png" class="exam-fig wide" alt="1번 수직선" />
       <div class="options">
         ① 점 $A$의 좌표를 기호로 나타내면 $-5$이다.<br/>
         ② 점 $B$의 좌표는 $-\frac{7}{3}$이다.<br/>
@@ -236,25 +222,10 @@
       <div class="answer-line">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
     </div>
 
-    <!-- 04번 (레이아웃 조화) -->
+    <!-- 04번 -->
     <div class="problem-box">
       <div class="problem-title">4. 라원이가 등산을 할 때, 경과 시간 $x$에 따른 지면으로부터의 높이 $y$라 하자. $x$와 $y$ 사이의 관계를 그래프로 나타내면 다음과 같을 때, 다음 중 A 구간에 대한 설명으로 가장 적절한 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" height="140">
-  <line x1="30" y1="130" x2="225" y2="130" stroke="#333" stroke-width="1.5"/>
-  <line x1="30" y1="130" x2="30" y2="15" stroke="#333" stroke-width="1.5"/>
-  <polygon points="225,127 232,130 225,133" fill="#333"/>
-  <polygon points="27,15 30,8 33,15" fill="#333"/>
-  <text x="228" y="142" font-size="10">x</text>
-  <text x="20" y="15" font-size="10">y</text>
-  <text x="20" y="142" font-size="10">O</text>
-  <!-- Mountain profile: (30,130) -> (60,75) -> (85,100) -> (120,40) -> (150,45) -> (185,60) [Section A] -> (200,130) -->
-  <polyline points="30,130 65,70 85,95 120,35 155,42 185,65 200,130" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-  <!-- Shaded area for A between 155 and 185 -->
-  <polygon points="155,42 185,65 185,130 155,130" fill="rgba(37,99,235,0.08)"/>
-  <line x1="155" y1="42" x2="155" y2="130" stroke="#888" stroke-dasharray="2,2"/>
-  <line x1="185" y1="65" x2="185" y2="130" stroke="#888" stroke-dasharray="2,2"/>
-  <text x="170" y="85" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">A</text>
-</svg></div>
+      <img src="images/midterm_pdf/q04.png" class="exam-fig" alt="4번 등산 그래프" />
       <div class="options">
         ① 잠시 쉬고 있다.<br/>
         ② 정상에 오르는 중이다.<br/>
@@ -270,43 +241,7 @@
     <!-- 02번 -->
     <div class="problem-box">
       <div class="problem-title">2. 다음 좌표평면 위의 점 $A, B, C, D, E$의 좌표를 기호로 나타낸 것으로 옳은 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="100%" height="180">
-  <!-- Grid -->
-  <defs>
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect x="20" y="20" width="180" height="180" fill="url(#grid)"/>
-  <!-- Axes: origin at (110, 110) -->
-  <line x1="20" y1="110" x2="205" y2="110" stroke="#333" stroke-width="1.5"/>
-  <polygon points="205,107 212,110 205,113" fill="#333"/>
-  <text x="210" y="123" font-size="11">x</text>
-  <line x1="110" y1="200" x2="110" y2="15" stroke="#333" stroke-width="1.5"/>
-  <polygon points="107,15 110,8 113,15" fill="#333"/>
-  <text x="115" y="16" font-size="11">y</text>
-  <text x="98" y="123" font-size="10">O</text>
-  <text x="70" y="123" font-size="10">-2</text>
-  <text x="150" y="123" font-size="10">2</text>
-  <text x="98" y="73" font-size="10">2</text>
-  <text x="94" y="153" font-size="10">-2</text>
-  <!-- Points -->
-  <!-- A(0, 3) -> (110, 50) -->
-  <circle cx="110" cy="50" r="3.5" fill="#2563eb"/>
-  <text x="118" y="52" font-size="11" font-weight="bold">A</text>
-  <!-- E(1, 2) -> (130, 70) -->
-  <circle cx="130" cy="70" r="3.5" fill="#2563eb"/>
-  <text x="138" y="68" font-size="11" font-weight="bold">E</text>
-  <!-- D(3, 0) -> (170, 110) -->
-  <circle cx="170" cy="110" r="3.5" fill="#2563eb"/>
-  <text x="170" y="102" font-size="11" font-weight="bold">D</text>
-  <!-- C(2, -2) -> (150, 150) -->
-  <circle cx="150" cy="150" r="3.5" fill="#2563eb"/>
-  <text x="157" y="153" font-size="11" font-weight="bold">C</text>
-  <!-- B(-2, -1) -> (70, 130) -->
-  <circle cx="70" cy="130" r="3.5" fill="#2563eb"/>
-  <text x="56" y="133" font-size="11" font-weight="bold">B</text>
-</svg></div>
+      <img src="images/midterm_pdf/q02.png" class="exam-fig tall" alt="2번 좌표평면" />
       <div class="options">
         <div class="options-row">
           <span>① $A(1, 3)$</span>
@@ -370,15 +305,7 @@
     <!-- 06번 -->
     <div class="problem-box">
       <div class="problem-title">6. 두 변수 $x$와 $y$ 사이의 관계를 그래프로 나타냈더니 다음과 같았다. 다음 중 변수 $x, y$로 가장 적합한 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" width="100%" height="120">
-  <line x1="25" y1="110" x2="200" y2="110" stroke="#333" stroke-width="1.5"/>
-  <line x1="25" y1="110" x2="25" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="203" y="114" font-size="10">x</text>
-  <text x="18" y="15" font-size="10">y</text>
-  <text x="16" y="122" font-size="10">O</text>
-  <!-- Wave path: oscillates between y=40 and y=95 -->
-  <path d="M 25 95 Q 50 35 75 75 T 125 75 T 175 75 T 195 90" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-</svg></div>
+      <img src="images/midterm_pdf/q06.png" class="exam-fig" alt="6번 그래프" />
       <div class="options">
         ① 자몽 $x\text{g}$의 비타민 C 함량 $y\text{mg}$<br/>
         ② 휴대폰을 충전할 때, 충전 시간 $x$에 따른 배터리 잔량 $y$<br/>
@@ -392,40 +319,7 @@
     <!-- 08번 -->
     <div class="problem-box">
       <div class="problem-title">8. 다음 중 $y = -\frac{1}{3}x$의 그래프를 나타낸 것으로 옳은 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="100%" height="170">
-  <defs>
-    <pattern id="g8" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect x="20" y="15" width="200" height="170" fill="url(#g8)"/>
-  <!-- Origin at (120, 100) -->
-  <line x1="20" y1="100" x2="225" y2="100" stroke="#333" stroke-width="1.5"/>
-  <line x1="120" y1="185" x2="120" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="228" y="104" font-size="10">x</text>
-  <text x="125" y="18" font-size="10">y</text>
-  <text x="110" y="112" font-size="10">O</text>
-  <!-- ticks -->
-  <text x="80" y="95" font-size="9">-2</text>
-  <text x="160" y="95" font-size="9">2</text>
-  <text x="125" y="65" font-size="9">2</text>
-  <text x="125" y="145" font-size="9">-2</text>
-  <!-- Line (가): y = 2x -->
-  <line x1="70" y1="185" x2="160" y2="20" stroke="#64748b" stroke-width="1.5"/>
-  <text x="85" y="25" font-size="10" font-weight="bold">(가)</text>
-  <!-- Line (나): y = -3x -->
-  <line x1="85" y1="15" x2="145" y2="185" stroke="#64748b" stroke-width="1.5"/>
-  <text x="65" y="65" font-size="10" font-weight="bold">(나)</text>
-  <!-- Line (다): y = x -->
-  <line x1="40" y1="180" x2="200" y2="20" stroke="#64748b" stroke-width="1.5"/>
-  <text x="155" y="25" font-size="10" font-weight="bold">(다)</text>
-  <!-- Line (라): y = (1/2)x -->
-  <line x1="30" y1="145" x2="210" y2="55" stroke="#64748b" stroke-width="1.5"/>
-  <text x="205" y="45" font-size="10" font-weight="bold">(라)</text>
-  <!-- Line (마): y = -(1/3)x -> passes (120,100), (60,80), (180,120) -->
-  <line x1="30" y1="70" x2="210" y2="130" stroke="#dc2626" stroke-width="2.5"/>
-  <text x="210" y="125" font-size="11" font-weight="bold" fill="#dc2626">(마)</text>
-</svg></div>
+      <img src="images/midterm_pdf/q08.png" class="exam-fig tall" alt="8번 5개 직선" />
       <div class="options">
         <div class="options-row">
           <span>① (가)</span>
@@ -435,7 +329,7 @@
           <span>⑤ (마)</span>
         </div>
       </div>
-      <div class="answer-line" style="margin-top: 30px;">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
+      <div class="answer-line" style="margin-top: 20px;">답: ( &nbsp;&nbsp;&nbsp;&nbsp; )번</div>
     </div>
   </div>
 
@@ -443,23 +337,7 @@
     <!-- 07번 -->
     <div class="problem-box">
       <div class="problem-title">7. 다음 그림은 두 변수 $x$와 $y$ 사이의 관계를 나타낸 그래프이다. $x = 2$일 때, $y$의 값은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" width="100%" height="120">
-  <line x1="30" y1="110" x2="195" y2="110" stroke="#333" stroke-width="1.5"/>
-  <line x1="30" y1="110" x2="30" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="198" y="114" font-size="10">x</text>
-  <text x="20" y="15" font-size="10">y</text>
-  <text x="20" y="122" font-size="10">O</text>
-  <!-- Points (30,110) -> (60,55) -> (170,55) -->
-  <line x1="30" y1="110" x2="65" y2="50" stroke="#2563eb" stroke-width="2.5"/>
-  <line x1="65" y1="50" x2="160" y2="50" stroke="#2563eb" stroke-width="2.5"/>
-  <!-- Dotted lines -->
-  <line x1="65" y1="50" x2="65" y2="110" stroke="#999" stroke-dasharray="2,2"/>
-  <line x1="160" y1="50" x2="160" y2="110" stroke="#999" stroke-dasharray="2,2"/>
-  <line x1="30" y1="50" x2="65" y2="50" stroke="#999" stroke-dasharray="2,2"/>
-  <text x="65" y="123" text-anchor="middle" font-size="10">2</text>
-  <text x="160" y="123" text-anchor="middle" font-size="10">9</text>
-  <text x="20" y="54" text-anchor="end" font-size="10">4</text>
-</svg></div>
+      <img src="images/midterm_pdf/q07.png" class="exam-fig" alt="7번 그래프" />
       <div class="options">
         <div class="options-row">
           <span>① 2</span>
@@ -494,28 +372,7 @@ eq 0$)의 그래프가 점 $(-2, -12)$를 지날 때, 다음 중 이 그래프 �
       <div class="problem-box">
         <div class="problem-title">10. 정비례 관계 $y = ax$ ($a 
 eq 0$)의 그래프가 다음 그림과 같을 때, $ab$의 값은?</div>
-        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="100%" height="150">
-  <!-- Origin at (100, 90) -->
-  <line x1="20" y1="90" x2="180" y2="90" stroke="#333" stroke-width="1.5"/>
-  <line x1="100" y1="165" x2="100" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="183" y="94" font-size="10">x</text>
-  <text x="93" y="15" font-size="10">y</text>
-  <text x="90" y="102" font-size="10">O</text>
-  <!-- Line passes (100,90), (60,45) -> point (b, 3), and (120, 150) -> point (2, -6) -->
-  <line x1="45" y1="20" x2="135" y2="165" stroke="#2563eb" stroke-width="2"/>
-  <!-- Point (b, 3) -->
-  <line x1="60" y1="45" x2="60" y2="90" stroke="#888" stroke-dasharray="2,2"/>
-  <line x1="60" y1="45" x2="100" y2="45" stroke="#888" stroke-dasharray="2,2"/>
-  <circle cx="60" cy="45" r="3" fill="#333"/>
-  <text x="60" y="103" text-anchor="middle" font-size="11">b</text>
-  <text x="106" y="48" font-size="11">3</text>
-  <!-- Point (2, -6) -->
-  <line x1="120" y1="135" x2="120" y2="90" stroke="#888" stroke-dasharray="2,2"/>
-  <line x1="100" y1="135" x2="120" y2="135" stroke="#888" stroke-dasharray="2,2"/>
-  <circle cx="120" cy="135" r="3" fill="#333"/>
-  <text x="120" y="85" text-anchor="middle" font-size="11">2</text>
-  <text x="80" y="139" font-size="11">-6</text>
-</svg></div>
+        <img src="images/midterm_pdf/q10.png" class="exam-fig" alt="10번 정비례 그래프" />
         <div class="options">
           <div class="options-row">
             <span>① -4</span>
@@ -566,24 +423,7 @@ eq 0$)의 그래프가 두 점 $(6, \frac{1}{2})$, $(b, -9)$를 지날 때, $a +
     <div class="problem-box">
       <div class="problem-title">14. 다음 그림과 같이 정비례 관계 $y = ax$ ($a 
 eq 0$)의 그래프와 반비례 관계 $y = \frac{12}{x}$의 그래프가 점 $P$에서 만날 때, 수 $a$의 값은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="100%" height="150">
-  <!-- Origin at (100, 110) -->
-  <line x1="20" y1="110" x2="220" y2="110" stroke="#333" stroke-width="1.5"/>
-  <line x1="100" y1="165" x2="100" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="223" y="114" font-size="10">x</text>
-  <text x="93" y="15" font-size="10">y</text>
-  <text x="90" y="122" font-size="10">O</text>
-  <!-- Line y = ax -->
-  <line x1="20" y1="135" x2="210" y2="70" stroke="#2563eb" stroke-width="2"/>
-  <!-- Hyperbola y = 12/x in Q1 and Q3 -->
-  <path d="M 115 15 Q 125 65 170 80 T 215 90" fill="none" stroke="#d97706" stroke-width="2"/>
-  <path d="M 85 165 Q 75 145 35 135" fill="none" stroke="#d97706" stroke-width="2"/>
-  <!-- Intersection P(6, 2) -> (170, 80) with y=2 -->
-  <circle cx="170" cy="80" r="4" fill="#dc2626"/>
-  <text x="175" y="75" font-size="12" font-weight="bold">P</text>
-  <line x1="100" y1="80" x2="170" y2="80" stroke="#888" stroke-dasharray="2,2"/>
-  <text x="88" y="84" font-size="11">2</text>
-</svg></div>
+      <img src="images/midterm_pdf/q14.png" class="exam-fig tall" alt="14번 교점 그래프" />
       <div class="options">
         <div class="options-row">
           <span>① 1</span>
@@ -642,34 +482,7 @@ eq 0$)의 그래프와 반비례 관계 $y = \frac{12}{x}$의 그래프가 점 $
     <div class="problem-box">
       <div class="problem-title">15. 다음 그림과 같이 반비례 관계 $y = \frac{a}{x}$ ($a 
 eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그어 만나는 점을 차례대로 $C, A, D, E$라 할 때, 직사각형 $OABC$와 직사각형 $ODFE$의 넓이의 합은? (단, $P$는 반비례 관계 $y = \frac{a}{x}$의 그래프 위의 점)</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="100%" height="160">
-  <!-- Origin at (100, 110) -->
-  <line x1="20" y1="110" x2="220" y2="110" stroke="#333" stroke-width="1.5"/>
-  <line x1="100" y1="185" x2="100" y2="15" stroke="#333" stroke-width="1.5"/>
-  <text x="223" y="114" font-size="10">x</text>
-  <text x="93" y="15" font-size="10">y</text>
-  <text x="90" y="122" font-size="10">O</text>
-  <!-- Curve Q1 & Q3 -->
-  <path d="M 115 20 Q 130 65 160 90 T 215 105" fill="none" stroke="#2563eb" stroke-width="2"/>
-  <path d="M 85 180 Q 70 145 40 120" fill="none" stroke="#2563eb" stroke-width="2"/>
-  <!-- Point P(2, 6) -> (125, 45) -->
-  <circle cx="125" cy="45" r="3.5" fill="#333"/>
-  <text x="130" y="42" font-size="11" font-weight="bold">P</text>
-  <text x="88" y="48" font-size="10">6</text>
-  <text x="125" y="122" text-anchor="middle" font-size="10">2</text>
-  <!-- Rect OABC at B: (170, 75) -->
-  <rect x="100" y="75" width="70" height="35" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-dasharray="2,2"/>
-  <circle cx="170" cy="75" r="3" fill="#2563eb"/>
-  <text x="175" y="72" font-size="11" font-weight="bold">B</text>
-  <text x="90" y="78" font-size="10">A</text>
-  <text x="170" y="122" font-size="10">C</text>
-  <!-- Rect ODFE at F: (60, 150) -->
-  <rect x="60" y="110" width="40" height="40" fill="rgba(217,119,6,0.15)" stroke="#d97706" stroke-dasharray="2,2"/>
-  <circle cx="60" cy="150" r="3" fill="#d97706"/>
-  <text x="48" y="155" font-size="11" font-weight="bold">F</text>
-  <text x="90" y="145" font-size="10">D</text>
-  <text x="60" y="105" font-size="10">E</text>
-</svg></div>
+      <img src="images/midterm_pdf/q15.png" class="exam-fig tall" alt="15번 직사각형 그래프" />
       <div class="options">
         <div class="options-row">
           <span>① 20</span>
@@ -700,25 +513,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 16번 -->
     <div class="problem-box">
       <div class="problem-title">16. 다음 그림과 같은 삼각기둥에서 교점의 개수는?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 160" width="100%" height="130">
-  <!-- Top triangle ABC: (90,20), (40,50), (140,50) -->
-  <polygon points="90,20 40,50 140,50" fill="rgba(37,99,235,0.1)" stroke="#2563eb" stroke-width="1.8"/>
-  <!-- Bottom triangle DEF: (90,100), (40,130), (140,130) -->
-  <line x1="40" y1="130" x2="140" y2="130" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="40" y1="130" x2="90" y2="100" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <line x1="140" y1="130" x2="90" y2="100" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <!-- Vertical pillars -->
-  <line x1="40" y1="50" x2="40" y2="130" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="140" y1="50" x2="140" y2="130" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="90" y1="20" x2="90" y2="100" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <!-- Vertices -->
-  <circle cx="90" cy="20" r="3" fill="#1e293b"/>
-  <circle cx="40" cy="50" r="3" fill="#1e293b"/>
-  <circle cx="140" cy="50" r="3" fill="#1e293b"/>
-  <circle cx="90" cy="100" r="3" fill="#1e293b"/>
-  <circle cx="40" cy="130" r="3" fill="#1e293b"/>
-  <circle cx="140" cy="130" r="3" fill="#1e293b"/>
-</svg></div>
+      <img src="images/midterm_pdf/q16.png" class="exam-fig" alt="16번 삼각기둥" />
       <div class="options">
         <div class="options-row">
           <span>① 4</span>
@@ -734,31 +529,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 19번 -->
     <div class="problem-box">
       <div class="problem-title">19. 다음 그림에 대한 설명으로 옳지 않은 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="100%" height="140">
-  <!-- Cuboid ABCD-EFGH style labeled with A,B,C,D,E... -->
-  <!-- Top: B(50,45), A(100,20), D(150,30), C(100,55) -->
-  <polygon points="50,45 100,20 150,30 100,55" fill="rgba(37,99,235,0.08)" stroke="#2563eb" stroke-width="1.8"/>
-  <text x="40" y="45" font-size="11" font-weight="bold">B</text>
-  <text x="100" y="14" font-size="11" font-weight="bold">A</text>
-  <text x="155" y="30" font-size="11" font-weight="bold">E</text>
-  <text x="100" y="52" font-size="11" font-weight="bold">C</text>
-  <text x="135" y="42" font-size="11" font-weight="bold">D</text>
-  <!-- Bottom: G(50,125), F(100,100), I(150,110), H(100,135) -->
-  <line x1="50" y1="125" x2="100" y2="135" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="100" y1="135" x2="150" y2="110" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="50" y1="125" x2="100" y2="100" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <line x1="100" y1="100" x2="150" y2="110" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <!-- Verticals -->
-  <line x1="50" y1="45" x2="50" y2="125" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="100" y1="55" x2="100" y2="135" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="150" y1="30" x2="150" y2="110" stroke="#2563eb" stroke-width="1.8"/>
-  <line x1="100" y1="20" x2="100" y2="100" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <text x="40" y="130" font-size="11" font-weight="bold">G</text>
-  <text x="90" y="100" font-size="11" font-weight="bold">F</text>
-  <text x="155" y="115" font-size="11" font-weight="bold">I</text>
-  <text x="100" y="148" font-size="11" font-weight="bold">H</text>
-  <text x="125" y="112" font-size="11" font-weight="bold">J</text>
-</svg></div>
+      <img src="images/midterm_pdf/q19.png" class="exam-fig" alt="19번 입체도형" />
       <div class="options" style="font-size: 12px;">
         ① 모서리 $BC$와 평행한 면은 2개이다.<br/>
         ② 모서리 $HJ$는 면 $HJDE$에 포함된다.<br/>
@@ -787,14 +558,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
 
       <div class="problem-box">
         <div class="problem-title">18. 다음 그림에서 $x$의 값은?</div>
-        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="100%" height="100">
-  <line x1="20" y1="20" x2="180" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="20" y1="100" x2="180" y2="20" stroke="#333" stroke-width="2"/>
-  <!-- Left angle: 2x - 30° -->
-  <text x="65" y="65" font-size="11" font-weight="bold" fill="#2563eb">2x - 30°</text>
-  <!-- Right angle: 60° -->
-  <text x="125" y="65" font-size="11" font-weight="bold" fill="#2563eb">60°</text>
-</svg></div>
+        <img src="images/midterm_pdf/q18.png" class="exam-fig" alt="18번 맞꼭지각" />
         <div class="options">
           <div class="options-row">
             <span>① 30</span>
@@ -812,22 +576,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <div>
       <div class="problem-box">
         <div class="problem-title">20. 다음 그림과 같은 전개도를 접어서 만든 삼각뿔에서 모서리 $AF$와 꼬인 위치에 있는 모서리는?</div>
-        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190" width="100%" height="160">
-  <!-- Center triangle BDF: B(50,110), D(150,110), F(100,25) wait, inverted -->
-  <!-- Top A(100, 20), Left C(40, 140), Right E(160, 140) -->
-  <!-- Inner triangle: B(70, 80), F(130, 80), D(100, 140) -->
-  <polygon points="100,20 40,140 160,140" fill="none" stroke="#2563eb" stroke-width="2"/>
-  <line x1="70" y1="80" x2="130" y2="80" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <line x1="70" y1="80" x2="100" y2="140" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <line x1="130" y1="80" x2="100" y2="140" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="3,3"/>
-  <polygon points="70,80 130,80 100,140" fill="rgba(37,99,235,0.12)"/>
-  <text x="100" y="14" text-anchor="middle" font-size="12" font-weight="bold">A</text>
-  <text x="55" y="80" font-size="11" font-weight="bold">B</text>
-  <text x="135" y="80" font-size="11" font-weight="bold">F</text>
-  <text x="30" y="145" font-size="11" font-weight="bold">C</text>
-  <text x="100" y="155" text-anchor="middle" font-size="11" font-weight="bold">D</text>
-  <text x="165" y="145" font-size="11" font-weight="bold">E</text>
-</svg></div>
+        <img src="images/midterm_pdf/q20.png" class="exam-fig" alt="20번 삼각뿔 전개도" />
         <div class="options">
           <div class="options-row">
             <span>① $BD$</span>
@@ -844,22 +593,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
 
       <div class="problem-box">
         <div class="problem-title">21. 다음 그림에서 직선 $PM$이 선분 $AB$의 수직이등분선일 때, 선분 $AB$의 길이는?</div>
-        <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" width="100%" height="110">
-  <line x1="40" y1="90" x2="200" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="120" y1="15" x2="120" y2="115" stroke="#2563eb" stroke-width="2"/>
-  <circle cx="40" cy="90" r="3.5" fill="#333"/>
-  <circle cx="200" cy="90" r="3.5" fill="#333"/>
-  <circle cx="120" cy="90" r="3.5" fill="#2563eb"/>
-  <circle cx="120" cy="25" r="3.5" fill="#2563eb"/>
-  <text x="30" y="94" font-size="12" font-weight="bold">A</text>
-  <text x="208" y="94" font-size="12" font-weight="bold">B</text>
-  <text x="125" y="103" font-size="11" font-weight="bold">M</text>
-  <text x="128" y="28" font-size="11" font-weight="bold">P</text>
-  <!-- Right angle mark at M -->
-  <rect x="110" y="80" width="10" height="10" fill="none" stroke="#2563eb" stroke-width="1.2"/>
-  <!-- Length 3cm for AM -->
-  <text x="80" y="105" text-anchor="middle" font-size="11" fill="#2563eb">3cm</text>
-</svg></div>
+        <img src="images/midterm_pdf/q21.png" class="exam-fig" alt="21번 수직이등분선" />
         <div class="options">
           <div class="options-row">
             <span>① 3cm</span>
@@ -891,21 +625,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 22번 -->
     <div class="problem-box">
       <div class="problem-title">22. 다음 그림을 보고 &lt;보기&gt; 중 옳은 것을 고른 것은?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" width="100%" height="130">
-  <!-- Right triangle ABD with hypotenuse AD: B(50, 110), A(50, 40), D(190, 110), C(110, 110) -->
-  <line x1="50" y1="110" x2="200" y2="110" stroke="#333" stroke-width="2"/>
-  <line x1="50" y1="40" x2="50" y2="110" stroke="#2563eb" stroke-width="2"/>
-  <line x1="50" y1="40" x2="110" y2="110" stroke="#2563eb" stroke-width="1.5"/>
-  <line x1="50" y1="40" x2="190" y2="110" stroke="#2563eb" stroke-width="2"/>
-  <rect x="50" y="100" width="10" height="10" fill="none" stroke="#333" stroke-width="1.2"/>
-  <circle cx="50" cy="40" r="3" fill="#333"/><text x="45" y="32" font-size="11" font-weight="bold">A</text>
-  <circle cx="50" cy="110" r="3" fill="#333"/><text x="42" y="123" font-size="11" font-weight="bold">B</text>
-  <circle cx="110" cy="110" r="3" fill="#333"/><text x="110" y="123" font-size="11" font-weight="bold">C</text>
-  <circle cx="190" cy="110" r="3" fill="#333"/><text x="195" y="123" font-size="11" font-weight="bold">D</text>
-  <text x="32" y="75" font-size="10">6cm</text>
-  <text x="83" y="70" font-size="10">9cm</text>
-  <text x="128" y="65" font-size="10">12cm</text>
-</svg></div>
+      <img src="images/midterm_pdf/q22.png" class="exam-fig" alt="22번 수선의 발 삼각형" />
       <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 6px 10px; border-radius: 6px; font-size: 12px; margin: 4px 0;">
         ㄱ. 점 $A$에서 $\overleftrightarrow{BD}$에 내린 수선의 발은 점 $D$이다.<br/>
         ㄴ. 점 $A$와 $\overleftrightarrow{BC}$ 사이의 거리는 6cm이다.<br/>
@@ -928,22 +648,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 25번 -->
     <div class="problem-box">
       <div class="problem-title">25. 다음 그림에서 $l // m$일 때, $\angle x$의 크기는?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" width="100%" height="130">
-  <!-- Parallel lines l and m -->
-  <line x1="25" y1="30" x2="215" y2="30" stroke="#333" stroke-width="2"/>
-  <text x="220" y="34" font-size="12" font-style="italic">l</text>
-  <line x1="25" y1="125" x2="215" y2="125" stroke="#333" stroke-width="2"/>
-  <text x="220" y="129" font-size="12" font-style="italic">m</text>
-  <!-- Bent line: (80,30) -> (120,75) -> (165,125) -->
-  <polyline points="75,30 125,75 165,125" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-  <!-- Angles -->
-  <path d="M 95 30 A 20 20 0 0 1 85 40" fill="none" stroke="#333"/>
-  <text x="95" y="24" font-size="11">45°</text>
-  <path d="M 115 75 A 15 15 0 0 0 130 83" fill="none" stroke="#dc2626" stroke-width="1.8"/>
-  <text x="105" y="80" font-size="12" font-weight="bold" fill="#dc2626">x</text>
-  <path d="M 145 125 A 20 20 0 0 1 155 110" fill="none" stroke="#333"/>
-  <text x="170" y="118" font-size="11">80°</text>
-</svg></div>
+      <img src="images/midterm_pdf/q25.png" class="exam-fig" alt="25번 평행선 꺾인 각" />
       <div class="options">
         <div class="options-row">
           <span>① 110°</span>
@@ -963,20 +668,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 23번 -->
     <div class="problem-box">
       <div class="problem-title">23. 다음 그림에서 점 $M$은 선분 $AB$의 중점이고, 점 $N$은 선분 $BC$의 중점이다. 선분 $NC$의 길이는?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="100%" height="80">
-  <line x1="30" y1="45" x2="270" y2="45" stroke="#333" stroke-width="2"/>
-  <!-- Points A(30), M(80), B(130), N(200), C(270) -->
-  <circle cx="30" cy="45" r="3.5" fill="#333"/><text x="30" y="65" text-anchor="middle" font-size="11" font-weight="bold">A</text>
-  <circle cx="80" cy="45" r="3" fill="#2563eb"/><text x="80" y="65" text-anchor="middle" font-size="11" font-weight="bold">M</text>
-  <circle cx="130" cy="45" r="3.5" fill="#333"/><text x="130" y="65" text-anchor="middle" font-size="11" font-weight="bold">B</text>
-  <circle cx="200" cy="45" r="3" fill="#2563eb"/><text x="200" y="65" text-anchor="middle" font-size="11" font-weight="bold">N</text>
-  <circle cx="270" cy="45" r="3.5" fill="#333"/><text x="270" y="65" text-anchor="middle" font-size="11" font-weight="bold">C</text>
-  <!-- Length AM = 5cm -->
-  <text x="55" y="38" text-anchor="middle" font-size="10" fill="#2563eb">4cm</text>
-  <!-- Length AC = 12cm -->
-  <path d="M 30 25 L 30 18 L 270 18 L 270 25" fill="none" stroke="#64748b" stroke-width="1.2"/>
-  <text x="150" y="14" text-anchor="middle" font-size="10" fill="#64748b">12cm</text>
-</svg></div>
+      <img src="images/midterm_pdf/q23.png" class="exam-fig wide" alt="23번 선분 중점" />
       <div class="options">
         <div class="options-row">
           <span>① 1cm</span>
@@ -992,18 +684,7 @@ eq 0$)의 그래프 위의 두 점 $B, F$에서 $x$축, $y$축에 수선을 그�
     <!-- 24번 -->
     <div class="problem-box">
       <div class="problem-title">24. 다음 그림과 같이 직사각형 모양의 종이를 접었을 때, $2\angle x - \angle y$의 크기는?</div>
-      <div class="problem-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" width="100%" height="140">
-  <!-- Original strip top and bottom parallel lines -->
-  <line x1="20" y1="35" x2="200" y2="35" stroke="#333" stroke-width="1.8"/>
-  <line x1="20" y1="125" x2="200" y2="125" stroke="#333" stroke-width="1.8"/>
-  <!-- Folded polygon -->
-  <polygon points="55,125 105,35 155,125" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="2"/>
-  <polygon points="55,125 105,35 70,35" fill="rgba(100,116,139,0.2)" stroke="#64748b" stroke-width="1.5"/>
-  <!-- Angles: fold angle at 110° -->
-  <text x="125" y="115" font-size="11" font-weight="bold">110°</text>
-  <text x="75" y="120" font-size="11" font-weight="bold" fill="#dc2626">x</text>
-  <text x="80" y="55" font-size="11" font-weight="bold" fill="#2563eb">y</text>
-</svg></div>
+      <img src="images/midterm_pdf/q24.png" class="exam-fig" alt="24번 종이접기" />
       <div class="options">
         <div class="options-row">
           <span>① 100°</span>
